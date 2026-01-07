@@ -17,7 +17,7 @@ col1, col2 = st.columns([1, 2])
 
 with col1:
     vig_photo = Image.open("assets/vignette_photo.JPG")
-    rot_vig_photo = vig_photo.rotate(90, expand=True)
+    rot_vig_photo = vig_photo.rotate(270, expand=True)
     st.image(rot_vig_photo, caption="The fully integrated sorting station.")
     with open("assets/vignette_docs.pdf", "rb") as file:
         st.download_button("Download Vignette Documentation", data=file, mime="application/pdf")
