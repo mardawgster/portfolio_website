@@ -16,7 +16,7 @@ st.header("Featured Project: Agricultural Computer Vision Vignette")
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image("assets/vignette_photo.png", caption="The fully integrated sorting station.")
+    st.image("assets/vignette_photo.JPG", caption="The fully integrated sorting station.")
     st.write("**Tech Stack:**")
     st.code("CV: YOLOv11\nEdge: ESP32\nLogic: Python\nProtocol: MQTT/Mosquitto")
 
@@ -32,7 +32,7 @@ with col2:
     """)
     
     # Placeholder for your demo video
-    st.video("https://www.youtube.com/watch?v=your_video_link") 
+    st.video("https://assets.gaa.im/videos/lemon_sorter_demo.webm") 
 
 # --- SKILLS & RESEARCH ---
 st.divider()
