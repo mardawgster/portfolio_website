@@ -73,9 +73,9 @@ def project_card(col, title, image_url, page_name, caption):
 # --- 3. ADD YOUR PROJECTS ---
 # Replace URLs with your image links (or base64 strings)
 # Note: page_name should match the name of the file in /pages/ (without .py)
-st.image("assets/vignette_photo.jpg") # Put your image here
+st.image("./assets/vignette_photo.jpg") # Put your image here
 if st.button("Explore Lemon Sorting", use_container_width=True):
-    st.switch_page("pages/Lemon_Sorting.py")
+    st.switch_page("./pages/Lemon_Sorting.py")
 
 lemon_img = get_base64_image("assets/vignette_photo.jpg")
 project_card(col1, "Lemon Sorter", lemon_img, "lem_sort", "Created Custom Lemon Quality Sorting System using Computer Vision.")
