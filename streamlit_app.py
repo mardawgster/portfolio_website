@@ -78,6 +78,7 @@ with colmain1:
         )
     st.space("small")
     st.write(" 🍋 Automated Lemon Sorter 🍋 ")
+    st.space("small")
 
 with colmain2:
     
@@ -94,6 +95,7 @@ with colmain2:
         )
     st.space("small")
     st.write(" 🏎️ SMI Composites Process Improvement 🛩️ ")
+    st.space("small")
 
 with colmain3:
     
@@ -110,6 +112,7 @@ with colmain3:
         )
     st.space("small")
     st.write(" 🛠️ Cyber-Physical Assembly Line 🛠️ ")
+    st.space("small")
 
 with colmain4:
     
@@ -126,6 +129,7 @@ with colmain4:
         )
     st.space("small")
     st.write(" 🐶 SCOUT: RFID Robot Dog 🐶 ")
+    st.space("small")
 
 ## PUBLICATIONS
 st.space("medium")
