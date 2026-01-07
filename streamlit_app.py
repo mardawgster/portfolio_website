@@ -5,17 +5,21 @@ from PIL import Image
 st.set_page_config(page_title="Marcus DiBattista | PhD Portfolio", layout="wide")
 
 # --- HEADER SECTION ---
-st.title("Marcus DiBattista, PhD Candidate")
-st.subheader("Mechanical Engineering @ University of Georgia")
-st.write("Specializing in SME-accessible manufacturing technology and IoT integration.")
+col1head, col2head = st.columns([3, 1])
+with col1head:
+    st.title("Marcus DiBattista, PhD Candidate")
+    st.subheader("Mechanical Engineering @ University of Georgia")
+    st.write("Specializing in SME-accessible manufacturing technology and IoT integration.")
+with col2head:
+    st.image("assets/Headshot.png")
 
 # --- PROJECT: FRUIT SORTING VIGNETTE ---
 st.divider()
 st.header("Featured Project: Agricultural Computer Vision Vignette")
 
-col1, col2 = st.columns([1, 2])
+col1main1, col2main1 = st.columns([1, 2])
 
-with col1:
+with col1main1:
     st.write("**Tech Stack:**")
     st.code("CV: YOLOv11\nEdge: ESP32 & M4 Mac Mini\nLogic: Python\nCOM Protocol: MQTT/Mosquitto")
     with open("assets/vignette_docs.pdf", "rb") as file:
@@ -26,7 +30,7 @@ with col1:
 
 
 
-with col2:
+with col2main1:
     st.markdown("""
     ### Autonomous Quality Detection for SMEs
     This project demonstrates a low-cost, robust, internet-independent computer vision system designed for automated agricultural sorting. 
