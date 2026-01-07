@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
-
+import base64
+import os
 import streamlit as st
 
 # --- 1. CUSTOM CSS FOR HOVER EFFECT ---
@@ -32,7 +33,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-vig_photo = Image.open("assets/vignette_photo.JPG")
+def get_base64_image(image_path):
+    """Converts a local image to a base64 string for HTML use."""
+    try:
+        with open(image_path, "rb") as img_file:
+            return base64.b64encode(img_file.read()).decode()
+    except Exception as e:
+        # Returns a placeholder if the image is missing
+        return ""
 
 # Page Config
 st.set_page_config(page_title="Marcus DiBattista | PhD Portfolio", layout="wide")
@@ -54,7 +62,7 @@ def project_card(col, title, image_url, page_name, caption):
     with col:
         # We wrap the whole div in an <a> tag to make it clickable
         st.markdown(f"""
-            <a href="{page_name}" target="_self">
+            <a href="/{page_name}" target="_self">
                 <div class="project-card">
                     <img src="{image_url}">
                     <h3>{title}</h3>
@@ -66,5 +74,6 @@ def project_card(col, title, image_url, page_name, caption):
 # --- 3. ADD YOUR PROJECTS ---
 # Replace URLs with your image links (or base64 strings)
 # Note: page_name should match the name of the file in /pages/ (without .py)
-project_card(col1, "Lemon Sorter", "https://github.com/mardawgster/portfolio_website/blob/3da5386c88474075048d2b2fc9167c69cbf834c4/assets/vignette_photo.JPG", "lem_sort", "Created Custom Lemon Quality Sorting System using Computer Vision.")
-project_card(col2, "SMI 3D Printing Project", "https://github.com/mardawgster/portfolio_website/blob/3da5386c88474075048d2b2fc9167c69cbf834c4/assets/vignette_photo.JPG", "3dp_smi", "Integrating ESPHome with Home Assistant.")
+lemon_img = get_base64_image("images/vignette_photo.JPG")
+project_card(col1, "Lemon Sorter", lemon_img, "lem_sort", "Created Custom Lemon Quality Sorting System using Computer Vision.")
+project_card(col2, "SMI 3D Printing Project", lemon_img, "3dp_smi", "Integrating ESPHome with Home Assistant.")

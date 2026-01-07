@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 # Page Config
-st.Page(page_title="Lemon Sorting Project", layout="wide")
+st.set_page_config(page_title="Lemon Sorting Project", layout="wide")
 
 # --- HEADER SECTION ---
 col1head, col2head = st.columns([4, 1])
