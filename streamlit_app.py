@@ -30,10 +30,17 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 ## IMG TO BASE64
-def get_image_base64(pil_img):
-    buffer = io.BytesIO()
-    pil_img.save(buffer, format="JPEG")
-    return base64.b64encode(buffer.getvalue()).decode()
+def get_image_base64(pil_img, format):
+    if format == "JPEG":
+        buffer = io.BytesIO()
+        pil_img.save(buffer, format="JPEG")
+        return base64.b64encode(buffer.getvalue()).decode()
+    elif format == "PNG":
+        buffer = io.BytesIO()
+        pil_img.save(buffer, format="PNG")
+        return base64.b64encode(buffer.getvalue()).decode()
+    else:
+        return pil_img
 
 # Page Config
 st.set_page_config(page_title="Home", layout="wide")
@@ -47,15 +54,15 @@ with col1head:
 with col2head:
     st.image("assets/Headshot.png", width=150)
 
-
+st.markdown("# 🏗️ Professional Projects 🏗️")
 
 colmain1, colmain2, colmain3, colmain4 = st.columns(4)
 
 with colmain1:
 
-    vig_photo = Image.open("assets/vignette_photo.JPG")
-    rot_vig_photo = vig_photo.rotate(270, expand=True)
-    img_b64 = get_image_base64(rot_vig_photo)
+    vig_photo = Image.open("assets/vignette_photo.jpeg")
+    #rot_vig_photo = vig_photo.rotate(270, expand=True)
+    img_b64 = get_image_base64(vig_photo, "JPEG")
 
     st.markdown(
             f"""
@@ -66,13 +73,13 @@ with colmain1:
             unsafe_allow_html=True
         )
     st.space("small")
-    st.write(" 🍋 Lemon Sorter Project 🍋 ")
+    st.write(" 🍋 Automated Lemon Sorter 🍋 ")
 
 with colmain2:
     
-    vig_photo = Image.open("assets/vignette_photo.JPG")
-    rot_vig_photo = vig_photo.rotate(270, expand=True)
-    img_b64 = get_image_base64(rot_vig_photo)
+    smi_photo = Image.open("assets/smi_tools.png")
+    # rot_vig_photo = vig_photo.rotate(270, expand=True)
+    img_b64 = get_image_base64(smi_photo, "PNG")
 
     st.markdown(
             f"""
@@ -83,4 +90,32 @@ with colmain2:
             unsafe_allow_html=True
         )
     st.space("small")
-    st.write(" 🍋 Lemon Sorter Project 🍋 ")
+    st.write(" 🏎️ SMI Composites Process Improvement 🛩️ ")
+
+with colmain2:
+    
+    vig_photo = Image.open("assets/vignette_photo.jpeg")
+    # rot_vig_photo = vig_photo.rotate(270, expand=True)
+    img_b64 = get_image_base64(vig_photo)
+
+    st.markdown(
+            f"""
+            <a href="/smi_3dp" target="_self">
+                <img src="data:image/jpeg;base64,{img_b64}" class="project-thumbnail">
+            </a>
+            """,
+            unsafe_allow_html=True
+        )
+    st.space("small")
+    st.write(" 🏎️ SMI Composites Process Improvement 🛩️ ")
+
+## PUBLICATIONS
+st.space("medium")
+st.markdown("# 📖 Publications 📖")
+st.space("small")
+st.link_button("Framework for LLM applications in manufacturing", "https://www.sciencedirect.com/science/article/pii/S2213846324000920")
+st.link_button("SCOUT: an autonomous UHF RFID-equipped robot dog for flexible inventory monitoring", "https://www.sciencedirect.com/science/article/pii/S2213846325002081")
+
+## PERSONAL PROJECTS
+st.space("medium")
+st.markdown("# 🪚 Personal Projects 🪚")
