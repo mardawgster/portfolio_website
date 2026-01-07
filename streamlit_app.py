@@ -32,7 +32,7 @@ with col2:
     
     **Key Engineering Achievements:**
     * **Smoothed Label Algorithm:** Developed a rolling-history classification system to eliminate detection "flickering" and rotation compensation in moving objects.
-    * **Pneumatic Edge-Triggering:** Integrated an IR proximity sensor with "rising edge" logic to ensure millisecond-accurate ejection of defective fruit[cite: 61, 277].
+    * **Pneumatic Edge-Triggering:** Integrated an IR proximity sensor with "rising edge" logic to ensure millisecond-accurate ejection of defective fruit.
     * **Accessible Architecture:** Built using an **M4 Mac Mini** and **ESP32**, proving that industrial-grade AI can run on inexpensive, open hardware.
     * **Open-Source Software:** Runs an open-source YOLO V11 model and trained on real data showing the accessibility of the technology.
     """)
