@@ -66,5 +66,5 @@ def project_card(col, title, image_url, page_name, caption):
 # --- 3. ADD YOUR PROJECTS ---
 # Replace URLs with your image links (or base64 strings)
 # Note: page_name should match the name of the file in /pages/ (without .py)
-project_card(col1, "Lemon Sorter", vig_photo, "lem_sort", "Created Custom Lemon Quality Sorting System using Computer Vision.")
-project_card(col2, "SMI 3D Printing Project", vig_photo, "3dp_smi", "Integrating ESPHome with Home Assistant.")
+project_card(col1, "Lemon Sorter", "https://github.com/mardawgster/portfolio_website/blob/3da5386c88474075048d2b2fc9167c69cbf834c4/assets/vignette_photo.JPG", "lem_sort", "Created Custom Lemon Quality Sorting System using Computer Vision.")
+project_card(col2, "SMI 3D Printing Project", "https://github.com/mardawgster/portfolio_website/blob/3da5386c88474075048d2b2fc9167c69cbf834c4/assets/vignette_photo.JPG", "3dp_smi", "Integrating ESPHome with Home Assistant.")
