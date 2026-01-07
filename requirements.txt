@@ -3,3 +3,4 @@ Pillow
 pandas
 os-sys
 pybase64
+streamlit-image-comparison

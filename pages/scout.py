@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+from streamlit_image_comparison import image_comparison
 
 # Page Config
 st.set_page_config(page_title="PAGE TITLE", layout="wide")
@@ -16,9 +17,9 @@ col1main1, col2main1 = st.columns([1, 2])
 with col1main1:
     st.write("**Tech Stack:**")
     st.code("")
-    with open("assets/FILE_PATH", "rb") as file:
-        st.download_button("Download Full Documentation", data=file, mime="application/pdf")
-    vig_photo = Image.open("assets/FILE_PATH")
+    # with open("assets/FILE_PATH", "rb") as file:
+    #     st.download_button("Download Full Documentation", data=file, mime="application/pdf")
+    vig_photo = Image.open("assets/scout")
     rot_vig_photo = vig_photo.rotate(270, expand=True)
     st.image(rot_vig_photo, caption="IMAGE CAPTION")
 
@@ -37,7 +38,10 @@ with col2main1:
     """)
     
     # Demo Video
-    st.video("VIDEO_LINK") 
+    image_comparison(
+        img1="scout1.jpeg",
+        img2="scout2.jpeg",
+    )
 
 # --- SKILLS & RESEARCH ---
 st.divider()

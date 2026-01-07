@@ -61,7 +61,6 @@ colmain1, colmain2, colmain3, colmain4 = st.columns(4)
 with colmain1:
 
     vig_photo = Image.open("assets/vignette_photo.jpeg")
-    #rot_vig_photo = vig_photo.rotate(270, expand=True)
     img_b64 = get_image_base64(vig_photo, "JPEG")
 
     st.markdown(
@@ -78,7 +77,6 @@ with colmain1:
 with colmain2:
     
     smi_photo = Image.open("assets/smi_tools.png")
-    # rot_vig_photo = vig_photo.rotate(270, expand=True)
     img_b64 = get_image_base64(smi_photo, "PNG")
 
     st.markdown(
@@ -92,22 +90,37 @@ with colmain2:
     st.space("small")
     st.write(" 🏎️ SMI Composites Process Improvement 🛩️ ")
 
-with colmain2:
+with colmain3:
     
-    vig_photo = Image.open("assets/vignette_photo.jpeg")
-    # rot_vig_photo = vig_photo.rotate(270, expand=True)
-    img_b64 = get_image_base64(vig_photo)
+    assy_photo = Image.open("assets/assy_line.jpeg")
+    img_b64 = get_image_base64(assy_photo, "JPEG")
 
     st.markdown(
             f"""
-            <a href="/smi_3dp" target="_self">
+            <a href="/assy_line" target="_self">
                 <img src="data:image/jpeg;base64,{img_b64}" class="project-thumbnail">
             </a>
             """,
             unsafe_allow_html=True
         )
     st.space("small")
-    st.write(" 🏎️ SMI Composites Process Improvement 🛩️ ")
+    st.write(" 🛠️ Cyber-Physical Assembly Line 🛠️ ")
+
+with colmain4:
+    
+    scout_photo = Image.open("assets/scout.jpeg")
+    img_b64 = get_image_base64(scout_photo, "JPEG")
+
+    st.markdown(
+            f"""
+            <a href="/scout" target="_self">
+                <img src="data:image/jpeg;base64,{img_b64}" class="project-thumbnail">
+            </a>
+            """,
+            unsafe_allow_html=True
+        )
+    st.space("small")
+    st.write(" 🐶 SCOUT: RFID Robot Dog 🐶 ")
 
 ## PUBLICATIONS
 st.space("medium")
