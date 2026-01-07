@@ -38,8 +38,8 @@ with col2main1:
     
     # Demo Video
     image_comparison(
-        img1="scout1.jpeg",
-        img2="scout2.jpeg",
+        img1="assets/scout1.jpeg",
+        img2="assets/scout2.jpeg",
     )
 
 # --- SKILLS & RESEARCH ---
