@@ -5,9 +5,12 @@ from PIL import Image
 st.set_page_config(page_title="SMI Composites Tooling Improvement", layout="wide")
 
 # --- HEADER SECTION ---
-col1head, col2head = st.columns([4, 1])
+col1head, col2head = st.columns([10, 1])
 with col1head:
     st.title("SMI Composites Tooling Improvement")
+
+with col2head:
+    st.page_link("streamlit_app.py", label="Home 🏠")
 
 # --- PROJECT: FRUIT SORTING VIGNETTE ---
 
@@ -16,11 +19,10 @@ col1main1, col2main1 = st.columns([1, 2])
 with col1main1:
     st.write("**Tech Stack:**")
     st.code("CV: YOLOv11\nEdge: ESP32 & M4 Mac Mini\nLogic: Python\nCOM Protocol: MQTT/Mosquitto")
-    with open("assets/vignette_docs.pdf", "rb") as file:
-        st.download_button("Download Full Documentation", data=file, mime="application/pdf")
-    vig_photo = Image.open("assets/vignette_photo.JPG")
-    rot_vig_photo = vig_photo.rotate(270, expand=True)
-    st.image(rot_vig_photo, caption="The fully integrated sorting station.")
+    # with open("assets/vignette_docs.pdf", "rb") as file:
+    #     st.download_button("Download Full Documentation", data=file, mime="application/pdf")
+    vig_photo = Image.open("assets/smi_tools.png")
+    st.image(vig_photo, caption="The fully integrated sorting station.")
 
 
 
@@ -37,7 +39,7 @@ with col2main1:
     """)
     
     # Demo Video
-    st.video("https://assets.gaa.im/videos/lemon_sorter_demo.webm") 
+    st.video("assets/smi_vid.mp4") 
 
 # --- SKILLS & RESEARCH ---
 st.divider()

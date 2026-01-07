@@ -46,13 +46,18 @@ def get_image_base64(pil_img, format):
 st.set_page_config(page_title="Home", layout="wide")
 
 # --- HEADER SECTION ---
-col1head, col2head = st.columns([4, 1])
+col1head, col2head, col3head = st.columns([1, 5, 1])
 with col1head:
+    st.image("assets/Headshot.png", width=150)
+with col2head:
     st.title("Marcus DiBattista, PhD Candidate")
     st.subheader("Mechanical Engineering @ University of Georgia")
     # st.markdown("#### Specializing in SME-accessible manufacturing technology and IoT integration.")
-with col2head:
-    st.image("assets/Headshot.png", width=150)
+with col3head:
+    st.link_button("LinkedIn", "https://www.linkedin.com/in/marcusdibattista/")
+    st.link_button("Google Scholar", "https://scholar.google.com/citations?user=ixBhetgAAAAJ&hl=en")
+    st.link_button("Thingiverse", "https://www.thingiverse.com/MADmarcus/designs")
+    st.link_button("YouTube", "https://www.youtube.com/@MarcusDiBattista")
 
 st.markdown("# 🏗️ Professional Projects 🏗️")
 
