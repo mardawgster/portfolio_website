@@ -58,8 +58,9 @@ with col3head:
     st.link_button("Google Scholar", "https://scholar.google.com/citations?user=ixBhetgAAAAJ&hl=en")
     st.link_button("Thingiverse", "https://www.thingiverse.com/MADmarcus/designs")
     st.link_button("YouTube", "https://www.youtube.com/@MarcusDiBattista")
-
+    st.link_button("GitHub", "https://github.com/mardawg")
 st.markdown("# 🏗️ Professional Projects")
+st.markdown("Click on a Project to Learn More")
 
 colmain1, colmain2, colmain3, colmain4 = st.columns(4)
 
