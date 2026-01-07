@@ -18,11 +18,12 @@ col1, col2 = st.columns([1, 2])
 with col1:
     st.write("**Tech Stack:**")
     st.code("CV: YOLOv11\nEdge: ESP32 & M4 Mac Mini\nLogic: Python\nCOM Protocol: MQTT/Mosquitto")
+    with open("assets/vignette_docs.pdf", "rb") as file:
+        st.download_button("Download Vignette Documentation", data=file, mime="application/pdf")
     vig_photo = Image.open("assets/vignette_photo.JPG")
     rot_vig_photo = vig_photo.rotate(270, expand=True)
     st.image(rot_vig_photo, caption="The fully integrated sorting station.")
-    with open("assets/vignette_docs.pdf", "rb") as file:
-        st.download_button("Download Vignette Documentation", data=file, mime="application/pdf")
+
 
 
 with col2:
