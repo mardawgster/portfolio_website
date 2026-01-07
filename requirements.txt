@@ -1,5 +1,5 @@
 streamlit
 Pillow
 pandas
-os
+os-sys
 pybase64
