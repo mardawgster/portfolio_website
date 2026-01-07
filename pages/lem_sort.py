@@ -2,20 +2,14 @@ import streamlit as st
 from PIL import Image
 
 # Page Config
-st.set_page_config(page_title="Marcus DiBattista | PhD Portfolio", layout="wide")
+st.Page(page_title="Lemon Sorting Project", layout="wide")
 
 # --- HEADER SECTION ---
 col1head, col2head = st.columns([4, 1])
 with col1head:
-    st.title("Marcus DiBattista, PhD Candidate")
-    st.subheader("Mechanical Engineering @ University of Georgia")
-    st.write("Specializing in SME-accessible manufacturing technology and IoT integration.")
-with col2head:
-    st.image("assets/Headshot.png", width=150)
+    st.title("Lemon Sorting Project")
 
 # --- PROJECT: FRUIT SORTING VIGNETTE ---
-st.divider()
-st.header("Featured Project: Agricultural Computer Vision Vignette")
 
 col1main1, col2main1 = st.columns([1, 2])
 
