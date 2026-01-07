@@ -59,7 +59,7 @@ with col3head:
     st.link_button("Thingiverse", "https://www.thingiverse.com/MADmarcus/designs")
     st.link_button("YouTube", "https://www.youtube.com/@MarcusDiBattista")
 
-st.markdown("# 🏗️ Professional Projects 🏗️")
+st.markdown("# 🏗️ Professional Projects")
 
 colmain1, colmain2, colmain3, colmain4 = st.columns(4)
 
@@ -129,11 +129,11 @@ with colmain4:
 
 ## PUBLICATIONS
 st.space("medium")
-st.markdown("# 📖 Publications 📖")
+st.markdown("# 📖 Publications")
 st.space("small")
 st.link_button("Framework for LLM applications in manufacturing", "https://www.sciencedirect.com/science/article/pii/S2213846324000920")
 st.link_button("SCOUT: an autonomous UHF RFID-equipped robot dog for flexible inventory monitoring", "https://www.sciencedirect.com/science/article/pii/S2213846325002081")
 
 ## PERSONAL PROJECTS
 st.space("medium")
-st.markdown("# 🪚 Personal Projects 🪚")
+st.markdown("# 🪚 Personal Projects")
