@@ -19,8 +19,7 @@ with col1main1:
     with open("assets/vignette_docs.pdf", "rb") as file:
         st.download_button("Download Full Documentation", data=file, mime="application/pdf")
     vig_photo = Image.open("assets/vignette_photo.jpeg")
-    rot_vig_photo = vig_photo.rotate(270, expand=True)
-    st.image(rot_vig_photo, caption="The fully integrated sorting station.")
+    st.image(vig_photo, caption="The fully integrated sorting station.")
 
 
 

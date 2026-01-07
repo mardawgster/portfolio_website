@@ -40,6 +40,8 @@ with col2main1:
     image_comparison(
         img1="assets/scout1.jpeg",
         img2="assets/scout2.jpeg",
+        label1="Old System",
+        label2="New System"
     )
 
 # --- SKILLS & RESEARCH ---

@@ -50,7 +50,7 @@ col1head, col2head = st.columns([4, 1])
 with col1head:
     st.title("Marcus DiBattista, PhD Candidate")
     st.subheader("Mechanical Engineering @ University of Georgia")
-    st.write("Specializing in SME-accessible manufacturing technology and IoT integration.")
+    # st.markdown("#### Specializing in SME-accessible manufacturing technology and IoT integration.")
 with col2head:
     st.image("assets/Headshot.png", width=150)
 
