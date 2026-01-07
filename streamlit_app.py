@@ -17,7 +17,7 @@ col1, col2 = st.columns([1, 2])
 
 with col1:
     st.write("**Tech Stack:**")
-    st.code("CV: YOLOv11\nEdge Control: ESP32\n Edge ModelL M4 Mac Mini\nLogic: Python\nCOM Protocol: MQTT/Mosquitto")
+    st.code("CV: YOLOv11\nEdge: ESP32 & M4 Mac Mini\nLogic: Python\nCOM Protocol: MQTT/Mosquitto")
     vig_photo = Image.open("assets/vignette_photo.JPG")
     rot_vig_photo = vig_photo.rotate(270, expand=True)
     st.image(rot_vig_photo, caption="The fully integrated sorting station.")
