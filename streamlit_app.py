@@ -11,7 +11,7 @@ with col1head:
     st.subheader("Mechanical Engineering @ University of Georgia")
     st.write("Specializing in SME-accessible manufacturing technology and IoT integration.")
 with col2head:
-    st.image("assets/Headshot.png", width="200")
+    st.image("assets/Headshot.png", width=200)
 
 # --- PROJECT: FRUIT SORTING VIGNETTE ---
 st.divider()
