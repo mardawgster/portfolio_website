@@ -1,6 +1,37 @@
 import streamlit as st
 from PIL import Image
 
+import streamlit as st
+
+# --- 1. CUSTOM CSS FOR HOVER EFFECT ---
+st.markdown("""
+    <style>
+    .project-card {
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #f0f2f6;
+        transition: transform .2s; /* Animation speed */
+        cursor: pointer;
+        border: 1px solid #ddd;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .project-card:hover {
+        transform: scale(1.05); /* Zoom effect on hover */
+        border-color: #ff4b4b; /* Change border color */
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    }
+    .project-card img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    a {
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Page Config
 st.set_page_config(page_title="Marcus DiBattista | PhD Portfolio", layout="wide")
 
@@ -13,40 +44,25 @@ with col1head:
 with col2head:
     st.image("assets/Headshot.png", width=150)
 
-# --- PROJECT: FRUIT SORTING VIGNETTE ---
-st.divider()
-st.header("Featured Project: Agricultural Computer Vision Vignette")
+# Create a grid (e.g., 2 columns)
+col1, col2 = st.columns(2)
 
-col1main1, col2main1 = st.columns([1, 2])
+# Helper function to create a card
+def project_card(col, title, image_url, page_name, caption):
+    with col:
+        # We wrap the whole div in an <a> tag to make it clickable
+        st.markdown(f"""
+            <a href="{page_name}" target="_self">
+                <div class="project-card">
+                    <img src="{image_url}">
+                    <h3>{title}</h3>
+                    <p>{caption}</p>
+                </div>
+            </a>
+        """, unsafe_allow_html=True)
 
-with col1main1:
-    st.write("**Tech Stack:**")
-    st.code("CV: YOLOv11\nEdge: ESP32 & M4 Mac Mini\nLogic: Python\nCOM Protocol: MQTT/Mosquitto")
-    with open("assets/vignette_docs.pdf", "rb") as file:
-        st.download_button("Download Vignette Documentation", data=file, mime="application/pdf")
-    vig_photo = Image.open("assets/vignette_photo.JPG")
-    rot_vig_photo = vig_photo.rotate(270, expand=True)
-    st.image(rot_vig_photo, caption="The fully integrated sorting station.")
-
-
-
-with col2main1:
-    st.markdown("""
-    ### Autonomous Quality Detection for SMEs
-    This project demonstrates a low-cost, robust, internet-independent computer vision system designed for automated agricultural sorting. 
-    
-    **Key Engineering Achievements:**
-    * **Smoothed Label Algorithm:** Developed a rolling-history classification system to eliminate detection "flickering" and rotation compensation in moving objects.
-    * **Pneumatic Edge-Triggering:** Integrated an IR proximity sensor with "rising edge" logic to ensure millisecond-accurate ejection of defective fruit.
-    * **Accessible Architecture:** Built using an **M4 Mac Mini** and **ESP32**, proving that industrial-grade AI can run on inexpensive, open hardware.
-    * **Open-Source Software:** Runs an open-source YOLO V11 model and trained on real data showing the accessibility of the technology.
-    """)
-    
-    # Demo Video
-    st.video("https://assets.gaa.im/videos/lemon_sorter_demo.webm") 
-
-# --- SKILLS & RESEARCH ---
-st.divider()
-st.header("Core Competencies")
-st.write("- **Hardware:** CNC (Genmitsu), Pneumatics (135 psi), PCB Design")
-st.write("- **Software:** Python (OpenCV, Ultralytics), ESPHome, Home Assistant, C++")
+# --- 3. ADD YOUR PROJECTS ---
+# Replace URLs with your image links (or base64 strings)
+# Note: page_name should match the name of the file in /pages/ (without .py)
+project_card(col1, "Lemon Sorter", "assets/vignette_photo.JPG", "lem_sort", "Created Custom Lemon Quality Sorting System using Computer Vision.")
+project_card(col2, "SMI 3D Printing Project", "assets/vignette_photo.JPG", "3dp_smi", "Integrating ESPHome with Home Assistant.")
