@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import base64
 import os
-import streamlit as st
 
 # --- 1. CUSTOM CSS FOR HOVER EFFECT ---
 st.markdown("""
@@ -74,6 +73,10 @@ def project_card(col, title, image_url, page_name, caption):
 # --- 3. ADD YOUR PROJECTS ---
 # Replace URLs with your image links (or base64 strings)
 # Note: page_name should match the name of the file in /pages/ (without .py)
-lemon_img = get_base64_image("images/vignette_photo.JPG")
+st.image("assets/vignette_photo.jpg") # Put your image here
+if st.button("Explore Lemon Sorting", use_container_width=True):
+    st.switch_page("pages/Lemon_Sorting.py")
+
+lemon_img = get_base64_image("assets/vignette_photo.jpg")
 project_card(col1, "Lemon Sorter", lemon_img, "lem_sort", "Created Custom Lemon Quality Sorting System using Computer Vision.")
 project_card(col2, "SMI 3D Printing Project", lemon_img, "3dp_smi", "Integrating ESPHome with Home Assistant.")
