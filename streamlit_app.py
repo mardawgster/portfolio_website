@@ -62,7 +62,7 @@ def project_card(col, title, image_url, page_name, caption):
     with col:
         # We wrap the whole div in an <a> tag to make it clickable
         st.markdown(f"""
-            <a href="/pages/{page_name}" target="_self">
+            <a href="./{page_name}" target="_self">
                 <div class="project-card">
                     <img src="{image_url}">
                     <h3>{title}</h3>
