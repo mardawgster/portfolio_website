@@ -28,15 +28,16 @@ with col1:
 with col2:
     st.markdown("""
     ### Autonomous Quality Detection for SMEs
-    This project demonstrates a low-cost, internet-independent computer vision system designed for agricultural sorting[cite: 23, 24, 25]. 
+    This project demonstrates a low-cost, robust, internet-independent computer vision system designed for automated agricultural sorting. 
     
     **Key Engineering Achievements:**
-    * **Smoothed Label Algorithm:** Developed a rolling-history classification system to eliminate detection "flickering" in moving objects[cite: 226, 227].
+    * **Smoothed Label Algorithm:** Developed a rolling-history classification system to eliminate detection "flickering" and rotation compensation in moving objects.
     * **Pneumatic Edge-Triggering:** Integrated an IR proximity sensor with "rising edge" logic to ensure millisecond-accurate ejection of defective fruit[cite: 61, 277].
-    * **Accessible Architecture:** Built using an **M4 Mac Mini** and **ESP32**, proving that industrial-grade AI can run on inexpensive, open-source hardware.
+    * **Accessible Architecture:** Built using an **M4 Mac Mini** and **ESP32**, proving that industrial-grade AI can run on inexpensive, open hardware.
+    * **Open-Source Software:** Runs an open-source YOLO V11 model and trained on real data showing the accessibility of the technology.
     """)
     
-    # Placeholder for your demo video
+    # Demo Video
     st.video("https://assets.gaa.im/videos/lemon_sorter_demo.webm") 
 
 # --- SKILLS & RESEARCH ---
