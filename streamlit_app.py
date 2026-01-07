@@ -5,7 +5,7 @@ from PIL import Image
 st.set_page_config(page_title="Marcus DiBattista | PhD Portfolio", layout="wide")
 
 # --- HEADER SECTION ---
-col1head, col2head = st.columns([3, 1])
+col1head, col2head = st.columns([4, 1])
 with col1head:
     st.title("Marcus DiBattista, PhD Candidate")
     st.subheader("Mechanical Engineering @ University of Georgia")
