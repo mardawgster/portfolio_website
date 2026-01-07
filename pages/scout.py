@@ -19,9 +19,8 @@ with col1main1:
     st.code("")
     # with open("assets/FILE_PATH", "rb") as file:
     #     st.download_button("Download Full Documentation", data=file, mime="application/pdf")
-    vig_photo = Image.open("assets/scout")
-    rot_vig_photo = vig_photo.rotate(270, expand=True)
-    st.image(rot_vig_photo, caption="IMAGE CAPTION")
+    scout_photo = Image.open("assets/scout.jpeg")
+    st.image(scout_photo, caption="SCOUT Inventory Localization System")
 
 
 
