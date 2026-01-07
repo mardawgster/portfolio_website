@@ -17,7 +17,7 @@ col1, col2 = st.columns([1, 2])
 
 with col1:
     st.image("assets/vignette_photo.JPG", caption="The fully integrated sorting station.", width="stretch")
-    st.download_button("Download Vignette Documentation", 'assets/Vision Vignette 2 Product Classification.pdf')
+    st.download_button("Download Vignette Documentation", file_name='assets/vignette_docs.pdf')
     st.write("**Tech Stack:**")
     st.code("CV: YOLOv11\nEdge: ESP32\nLogic: Python\nProtocol: MQTT/Mosquitto")
 
