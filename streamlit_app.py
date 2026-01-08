@@ -142,4 +142,3 @@ st.link_button("SCOUT: an autonomous UHF RFID-equipped robot dog for flexible in
 ## PERSONAL PROJECTS
 st.space("medium")
 st.markdown("# 🪚 Personal Projects")
-st.markdown("## BRUHH")
