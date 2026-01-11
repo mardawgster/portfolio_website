@@ -10,6 +10,9 @@ col1head, col2head = st.columns([4, 1])
 with col1head:
     st.title("HEADER")
 
+with col2head:
+    st.page_link("streamlit_app.py", label="Home 🏠")
+
 # --- PROJECT:  ---
 
 col1main1, col2main1 = st.columns([1, 2])

@@ -5,9 +5,12 @@ from PIL import Image
 st.set_page_config(page_title="PAGE TITLE", layout="wide")
 
 # --- HEADER SECTION ---
-col1head, col2head = st.columns([4, 1])
+col1head, col2head = st.columns([10, 1])
 with col1head:
-    st.title("HEADER")
+    st.title("Innovation Factory Cyber-Physical Assembly Testbed")
+
+with col2head:
+    st.page_link("streamlit_app.py", label="Home 🏠")
 
 # --- PROJECT:  ---
 

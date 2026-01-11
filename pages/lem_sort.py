@@ -5,9 +5,12 @@ from PIL import Image
 st.set_page_config(page_title="Lemon Sorting Project", layout="wide")
 
 # --- HEADER SECTION ---
-col1head, col2head = st.columns([4, 1])
+col1head, col2head = st.columns([10, 1])
 with col1head:
     st.title("Lemon Sorting Project")
+
+with col2head:
+    st.page_link("streamlit_app.py", label="Home 🏠")
 
 # --- PROJECT: FRUIT SORTING VIGNETTE ---
 
