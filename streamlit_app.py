@@ -138,6 +138,21 @@ st.space("small")
 st.link_button("Framework for LLM applications in manufacturing", "https://www.sciencedirect.com/science/article/pii/S2213846324000920")
 st.link_button("SCOUT: an autonomous UHF RFID-equipped robot dog for flexible inventory monitoring", "https://www.sciencedirect.com/science/article/pii/S2213846325002081")
 
+## ORGANIZATIONS
+
+st.space("medium")
+st.markdown("# 📢 Organizations")
+colorg1, colorg2, colorg3, colorg4 = st.columns(4)
+with colorg1:
+    
+    st.link_button("Engineers without Borders, UGA Chapter\nCo-founder & Vice President", "https://www.instagram.com/ewb.uga/?hl=en")
+with colorg2:
+    st.link_button("Manufacturing Club\nFounder & Graduate Advisor", "https://www.instagram.com/uga.mfg/?hl=en")
+with colorg3:
+    st.link_button("Create Engineering @\nFounder & Lead Engineer", "https://create.uga.edu/about/")
+with colorg4:
+    st.link_button("UGA Aviation Club\nVice President", "https://ugaaviationclub.com/")
+
 ## PERSONAL PROJECTS
 st.space("medium")
 st.markdown("# 🪚 Personal Projects")
