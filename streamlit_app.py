@@ -92,6 +92,87 @@ st.markdown("""
         margin-top: 10px;
         font-weight: bold;
     }
+    
+    /* Header Social Icons */
+    .social-dock {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .social-icon {
+        width: 35px !important;
+        height: 35px !important;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        filter: grayscale(100%) brightness(0.8); /* Muted look until hover */
+    }
+
+    .social-icon:hover {
+        transform: translateY(-5px) scale(1.1);
+        filter: grayscale(0%) brightness(1.2); /* Pops into color on hover */
+        cursor: pointer;
+    }
+
+    /* Styling for the Name and Subheader */
+    .header-name {
+        font-size: 2.8em;
+        font-weight: 800;
+        margin-bottom: 0px;
+        color: #fafafa;
+    }
+
+    .header-sub {
+        color: #ba0c2f; /* UGA Red */
+        font-weight: 500;
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+/* Experience Card Styling */
+    .exp-card {
+        background-color: #1f2937;
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        border-top: 2px solid #374151;
+        transition: border-top 0.3s ease;
+    }
+
+    .exp-card:hover {
+        border-top: 2px solid #ba0c2f; /* UGA Red accent */
+    }
+
+    .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 10px;
+    }
+
+    .role-title {
+        color: #ba0c2f;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    .company-name {
+        color: #fafafa;
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+
+    .exp-date {
+        color: #9ca3af;
+        font-size: 0.9em;
+        font-style: italic;
+    }
+
+    .exp-bullets {
+        color: #d1d5db;
+        font-size: 0.95em;
+        line-height: 1.6;
+        margin-top: 10px;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -135,18 +216,54 @@ def render_publication(title, journal, link):
     """
     st.markdown(pub_html, unsafe_allow_html=True)
 
+def render_experience(role, company, date, description_bullets):
+    bullets_html = "".join([f"<li>{bullet}</li>" for bullet in description_bullets])
+    exp_html = f"""
+    <div class="exp-card">
+        <div class="exp-header">
+            <div class="role-title">{role}</div>
+            <div class="exp-date">{date}</div>
+        </div>
+        <div class="company-name">{company}</div>
+        <ul class="exp-bullets">
+            {bullets_html}
+        </ul>
+    </div>
+    """
+    st.markdown(exp_html, unsafe_allow_html=True)
+
 # --- HEADER SECTION ---
-col1head, col2head, col3head = st.columns([1, 5, 1])
-with col1head:
-    st.image("assets/Headshot.png", width=150)
-with col2head:
-    st.title("Marcus DiBattista, PhD Candidate")
-    st.subheader("Mechanical Engineering @ University of Georgia")
-with col3head:
-    st.link_button("LinkedIn", "https://www.linkedin.com/in/marcusdibattista/")
-    st.link_button("Google Scholar", "https://scholar.google.com/citations?user=ixBhetgAAAAJ&hl=en")
-    st.link_button("Thingiverse", "https://www.thingiverse.com/MADmarcus/designs")
-    st.link_button("YouTube", "https://www.youtube.com/@MarcusDiBattista")
+
+# Use the same base64 trick if you want the headshot to have the hover flare
+img = Image.open("assets/Headshot.png")
+headshot_b64 = get_image_base64(img, "PNG")
+st.markdown(f'<img src="data:image/png;base64,{headshot_b64}" class="project-thumbnail" style="width:160px; border-radius:50%; border: 2px solid #ba0c2f;">', unsafe_allow_html=True)
+
+st.markdown('<div class="header-name">Marcus DiBattista</div>', unsafe_allow_html=True)
+st.markdown('<div class="header-sub">PhD Candidate & Manufacturing Technologist | Mechanical Engineering @ UGA</div>', unsafe_allow_html=True)
+
+# Define your social links and their local logo paths
+socials = [
+    ("https://www.linkedin.com/in/marcusdibattista/", "assets/linkedin.png"),
+    ("https://scholar.google.com/citations?user=ixBhetgAAAAJ", "assets/scholar.png"),
+    ("https://www.thingiverse.com/MADmarcus/designs", "assets/thingiverse.png"),
+    ("https://www.youtube.com/@MarcusDiBattista", "assets/youtube.png")
+]
+
+# Build the social dock HTML
+social_html = '<div class="social-dock">'
+for link, logo_path in socials:
+    try:
+        logo_img = Image.open(logo_path)
+        logo_b64 = get_image_base64(logo_img, "PNG")
+        social_html += f'<a href="{link}" target="_blank"><img src="data:image/png;base64,{logo_b64}" class="social-icon"></a>'
+    except:
+        continue # Skip if logo missing
+social_html += '</div>'
+st.markdown(social_html, unsafe_allow_html=True)
+st.space("medium")
+
+# --- PROFESSIONAL PROJECTS SECTION ---
 
 st.markdown("# 🏗️ Professional Projects")
 st.markdown("Click on a Project to Learn More")
@@ -270,3 +387,60 @@ with colorg4:
 ## PERSONAL PROJECTS
 st.space("medium")
 st.markdown("# 🪚 Personal Projects")
+
+# --- WORK EXPERIENCE ---
+st.markdown("---")
+st.markdown("# 💼 Work Experience")
+
+render_experience(
+    "Graduate Research & Teaching Assistant",
+    "UGA College of Engineering",
+    "May 2023 - Present",
+    [
+        "Developed Automated AI Computer Vision Fruit Sorting system for GA AI in Manufacturing Project.",
+        "Directed team for Hardware & Software integration of Innovation Factory Cyber-Physical Assembly Testbed.",
+        "Supervised capstone projects for MiR200/UR-10 integration and process improvements at SMI Composites."
+    ]
+)
+
+render_experience(
+    "Director",
+    "UGA Create Labs",
+    "Jan 2022 - Jan 2024",
+    [
+        "Managed a $50,000 lab buildout to increase prototyping and manufacturing capabilities.",
+        "Led project to design mechanism for collection of water samples from a UAV.",
+        "Recruited, onboarded, and trained 8 additional members to add diverse capabilities to the lab."
+    ]
+)
+
+render_experience(
+    "Lab Manager",
+    "UGA Innovation Factory",
+    "Jan 2022 - Jan 2023",
+    [
+        "Responsible for facility activities, including recruitment, hiring, and project management.",
+        "Advised projects involving robotics, computer vision, additive manufacturing, and industrial IOT.",
+        "Upgraded assembly line to increase data collection and analysis capabilities."
+    ]
+)
+
+render_experience(
+    "Manufacturing Engineering Intern",
+    "Price Industries",
+    "May 2022 - Aug 2022",
+    [
+        "Performed process analysis and created assembly process reports for multiple products.",
+        "Conducted logistics efficiency studies to improve product tracking throughout assembly."
+    ]
+)
+
+render_experience(
+    "Lead Project Management Co-op",
+    "McKenney's Inc.",
+    "Jun 2020 - Aug 2021",
+    [
+        "Assisted in $500,000 equipment installation in an active retail center.",
+        "Designed a system to record and organize maintenance reports for the company’s largest account."
+    ]
+)
