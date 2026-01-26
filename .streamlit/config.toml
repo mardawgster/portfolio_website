@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#ba0c2f"          # UGA Red
+backgroundColor = "#0e1117"       # Deep tech charcoal
+secondaryBackgroundColor = "#1f2937" # Slightly lighter charcoal for cards/sidebar
+textColor = "#fafafa"             # Off-white for readability
+font = "sans serif"
