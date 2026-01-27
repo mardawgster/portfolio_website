@@ -377,13 +377,13 @@ with st.expander("🎓  Graduate Research & Teaching Assistant | UGA College of 
     st.write("- Developed and delivered curriculum for undergraduate courses in Manufacturing Processes and Systems, incorporating hands-on labs and industry case studies to enhance student engagement and practical skills")
     st.write("- Directed engineering initiatives at SMI Composites to modernize additive manufacturing post-processing; pioneered a soda-blasting integration that significantly improved surface finish quality and cycle times")
 
-# 2. Founder & CEO - Cerithium Consulting
-with st.expander("🐚  Founder & CEO | Cerithium Consulting | 2023-Present"):
-    st.markdown("### Cerithium Consulting")
-    st.write("- Established a specialized consulting firm delivering cutting-edge Industry 4.0 solutions, focusing on the integration of AI, IoT, and advanced manufacturing technologies to drive operational excellence")
-    st.write("- Led end-to-end project lifecycles for diverse clients, from initial needs assessment and solution design to implementation and performance optimization, ensuring measurable ROI and client satisfaction")
-    st.write("- Cultivated strategic partnerships with technology providers and industry experts to enhance service offerings and stay at the forefront of emerging trends in smart manufacturing")
-    st.write("- Delivered tailored training programs and workshops for client teams, empowering them to leverage new technologies effectively and foster a culture of continuous improvement within their organizations")
+# 2. Founder & CEO - Cerithium Engineering
+with st.expander("🐚  Founder & CEO | Cerithium Engineering | 2023-Present"):
+    st.markdown("### Cerithium Engineering")
+    st.markdown("##### A boutique engineering consultancy specializing in delivering advanced manufacturing and prototyping solutions to clients across diverse industrial sectors, leveraging cutting-edge technologies to drive innovation and operational excellence")
+    st.write("- Founded and scaled a successful engineering consultancy, securing and executing projects in construction, historical preservation, and consumer products sectors")
+    st.write("- Led end-to-end project lifecycles for diverse clients, from initial needs assessment and solution design to implementation")
+    st.write("- Leveraged 3D LIDAR scanning and additive manufacturing technology to create precise recreation of historical building facades, enabling accurate restoration planning and preservation of architectural heritage")
 
 # 3. Founder & Chief Engineer - UGA Create Labs
 with st.expander("🗜️  Founder & Chief Engineer | Create Engineering | 2022-2024"):
