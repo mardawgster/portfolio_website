@@ -255,7 +255,7 @@ with colmain1:
 
     st.markdown(
             f"""
-            <a href="/lem_sort" target="_self">
+            <a href="/Lemon_Sorter" target="_self">
                 <img src="data:image/jpeg;base64,{img_b64}" class="project-thumbnail">
             </a>
             """,
@@ -272,7 +272,7 @@ with colmain2:
 
     st.markdown(
             f"""
-            <a href="/smi_3dp" target="_self">
+            <a href="/SMI_Process_Improvement" target="_self">
                 <img src="data:image/jpeg;base64,{img_b64}" class="project-thumbnail">
             </a>
             """,
@@ -289,7 +289,7 @@ with colmain3:
 
     st.markdown(
             f"""
-            <a href="/assy_line" target="_self">
+            <a href="/Assembly_Line" target="_self">
                 <img src="data:image/jpeg;base64,{img_b64}" class="project-thumbnail">
             </a>
             """,
@@ -306,7 +306,7 @@ with colmain4:
 
     st.markdown(
             f"""
-            <a href="/scout" target="_self">
+            <a href="/SCOUT_Robot_Dog" target="_self">
                 <img src="data:image/jpeg;base64,{img_b64}" class="project-thumbnail">
             </a>
             """,
