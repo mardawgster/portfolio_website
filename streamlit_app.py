@@ -5,7 +5,7 @@ import os
 import io
 
 # Page Config (Must be first)
-st.set_page_config(page_title="Home", layout="wide")
+st.set_page_config(page_title="Home", layout="wide", initial_sidebar_state="collapsed", page_icon="assets/Headshot.png")
 
 ## CSS
 st.markdown("""
@@ -368,38 +368,54 @@ st.markdown("# 💼 Work Experience")
 st.space("small")
 
 # 1. Graduate Research & Teaching Assistant
-with st.expander("🎓  Graduate Research & Teaching Assistant | UGA College of Engineering| 2023-Present", expanded=True):
-    st.markdown("### UGA College of Engineering")
-    st.write("- Developed Automated AI Computer Vision Fruit Sorting system for Georgia AI in Manufacturing Project. [cite: 26]")
-    st.write("- Directed team for Hardware & Software integration of Innovation Factory Cyber-Physical Assembly Testbed. [cite: 26]")
-    st.write("- Supervised capstone projects for MiR200/UR-10 integration and process improvements at SMI Composites. [cite: 26]")
+with st.expander("🎓  Graduate Research & Teaching Assistant | UGA College of Engineering | 2023-Present", expanded=True):
+    st.markdown("### University of Georgia College of Engineering")
+    st.markdown("##### A Tier-1 research institution and a rapidly growing hub for interdisciplinary engineering, dedicated to bridging the gap between theoretical AI research and scalable industrial applications within the Georgia AI in Manufacturing (GA-AIM) ecosystem")
+    st.write("- Architected a robust Computer Vision pipeline for the Georgia AI in Manufacturing (Georgia AIM) project, utilizing YOLOv11 architectures and multi-modal sensor inputs to automate complex quality assurance tasks")
+    st.write("- Architected the Hardware & Software integration for the Innovation Factory's Cyber-Physical Assembly Testbed, bridging real-time industrial sensors with digital-twin frameworks for advanced process monitoring and control")
+    st.write("- Mentored senior capstone teams in the multi-platform integration of MiR200 AMRs and UR-10 collaborative robots, automating material transport and assembly workflows for high-precision manufacturing applications")
+    st.write("- Developed and delivered curriculum for undergraduate courses in Manufacturing Processes and Systems, incorporating hands-on labs and industry case studies to enhance student engagement and practical skills")
+    st.write("- Directed engineering initiatives at SMI Composites to modernize additive manufacturing post-processing; pioneered a soda-blasting integration that significantly improved surface finish quality and cycle times")
 
-# 2. Director - UGA Create Labs
-with st.expander("🛠️  Director | UGA Create Labs | 2022-2024"):
-    st.markdown("### UGA Create Labs")
-    st.write("- Managed a $50,000 Lab buildout for Create Labs to increase prototyping and manufacturing capabilities. [cite: 30]")
-    st.write("- Led successful project to design mechanism for collection of water samples from a UAV. [cite: 30]")
-    st.write("- Recruited, onboarded, and trained 8 additional members to add diverse capabilities to the lab. [cite: 30]")
+# 2. Founder & CEO - Cerithium Consulting
+with st.expander("🐚  Founder & CEO | Cerithium Consulting | 2023-Present"):
+    st.markdown("### Cerithium Consulting")
+    st.write("- Established a specialized consulting firm delivering cutting-edge Industry 4.0 solutions, focusing on the integration of AI, IoT, and advanced manufacturing technologies to drive operational excellence")
+    st.write("- Led end-to-end project lifecycles for diverse clients, from initial needs assessment and solution design to implementation and performance optimization, ensuring measurable ROI and client satisfaction")
+    st.write("- Cultivated strategic partnerships with technology providers and industry experts to enhance service offerings and stay at the forefront of emerging trends in smart manufacturing")
+    st.write("- Delivered tailored training programs and workshops for client teams, empowering them to leverage new technologies effectively and foster a culture of continuous improvement within their organizations")
 
-# 3. Lab Manager - Innovation Factory
-with st.expander("🏭  Lab Manager | UGA Innovation Factory | 2022-2023"):
+# 3. Founder & Chief Engineer - UGA Create Labs
+with st.expander("🗜️  Founder & Chief Engineer | Create Engineering | 2022-2024"):
+    st.markdown("### CREATE Engineering")
+    st.markdown("##### A student-led innovation lab dedicated to empowering UGA students and faculty with advanced prototyping capabilities, fostering interdisciplinary collaboration, and driving experiential learning through hands-on projects")
+    st.write("- Spearheaded a $50,000 capital expansion for Create Engineering; orchestrated the procurement and commissioning of advanced manufacturing equipment to triple prototyping capacity")
+    st.write("- Pioneered the development of a lightweight mechatronic sampling payload for UAVs, enabling autonomous water collection in remote or hazardous aquatic environments")
+    st.write("- Scaled lab operations through the strategic recruitment and technical training of 8 cross-functional members, broadening the organization's R&D capabilities")
+
+# 4. Lab Manager - Innovation Factory
+with st.expander("🥼  Lab Manager | UGA Innovation Factory | 2022-2023"):
     st.markdown("### UGA Innovation Factory")
-    st.write("- Responsible for facility activities, including recruitment, hiring, and project management. [cite: 33]")
-    st.write("- Advised projects involving robotics, computer vision, additive manufacturing, and industrial IOT. [cite: 33]")
-    st.write("- Successfully led project to upgrade assembly line to increase data collection capabilities. [cite: 33]")
+    st.markdown("##### A cutting-edge research facility focused on advancing smart manufacturing technologies through interdisciplinary collaboration, state-of-the-art equipment, and industry partnerships")
+    st.write("- Governed end-to-end facility operations, synchronizing preventative maintenance schedules for advanced manufacturing hardware with strategic project lifecycles")
+    st.write("- Consulted on high-complexity R&D initiatives, providing technical steering for projects integrated with collaborative robotics (UR-10), computer vision, and Industrial IoT (IIoT) frameworks")
+    st.write("- Directed facility-wide resource allocation, ensuring 100% operational uptime and optimizing lab operations to support a diverse portfolio of academic and industry projects")
 
-# 4. Manufacturing Engineering Intern
-with st.expander("⚙️  Manufacturing Engineering Intern | Price Industries | 2022"):
+# 5. Manufacturing Engineering Intern
+with st.expander("🏭  Manufacturing Engineering Intern | Price Industries | 2022"):
     st.markdown("### Price Industries")
-    st.write("- Performed process analysis for multiple products and created assembly process reports. [cite: 35]")
-    st.write("- Performed logistics efficiency study aimed to improve product tracking throughout the assembly process. [cite: 37]")
+    st.markdown("##### A leading HVAC solutions provider specializing in innovative air distribution products and systems for commercial and industrial applications")
+    st.write("- Leveraged Lean manufacturing principles to redesign plant floor for Crestridge plant, optimizing spatial utilization and reducing transit times")
+    st.write("- Executed a comprehensive cost-benefit analysis for the security grill product line, identifying key manufacturing overheads to drive high-margin production strategies")
+    st.write("- Conducted a comprehensive logistics bottlenecks analysis, identifying key friction points to enhance real-time product traceability across the assembly lifecycle")
 
-# 5. Lead Project Management Co-op
-with st.expander("📋  Lead Project Management Co-op | McKenney's Inc. | 2020-2021"):
+# 6. Lead Project Management Co-op
+with st.expander("🏗️  Lead Project Management Co-op | McKenney's Inc. | 2020-2021"):
     st.markdown("### McKenney's Inc.")
-    st.write("- Assisted management with a $500,000 equipment installation in an active retail center. [cite: 40]")
-    st.write("- Designed a system that organized maintenance reports for the company's largest service account. [cite: 40]")
-    st.write("- Led the department's intern team, delegating tasks and training interns as needed. [cite: 40]")
+    st.markdown("##### A premier contractor specializing in HVAC, plumbing, and controls systems for large-scale commercial construction projects across the Southeastern United States")
+    st.write("- Coordinated a $500,000 equipment deployment within an operational retail facility, mitigating downtime and ensuring zero disruption to active businesses")
+    st.write("- Designed a data-driven maintenance tracking system, leveraging automated collection protocols to ensure 100% reporting compliance and visibility for the company's largest client")
+    st.write("- Cultivated a high-performing intern cohort by directing daily operations and building a technical training curriculum that accelerated their contribution to departmental R&D goals")
 
 ## PERSONAL PROJECTS
 st.space("medium")
