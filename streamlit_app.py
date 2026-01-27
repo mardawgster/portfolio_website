@@ -128,50 +128,27 @@ st.markdown("""
         font-size: 1.3em;
         margin-bottom: 15px;
     }
-/* Experience Card Styling */
-    .exp-card {
-        background-color: #1f2937;
-        padding: 25px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-        border-top: 2px solid #374151;
-        transition: border-top 0.3s ease;
-    }
-
-    .exp-card:hover {
-        border-top: 2px solid #ba0c2f; /* UGA Red accent */
-    }
-
-    .exp-header {
+    /* Main container to ensure all experience elements align */
+    .experience-container {
         display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center; /* Centers the cards on the page */
+        width: 100%;
     }
 
-    .role-title {
-        color: #ba0c2f;
-        font-size: 1.4em;
-        font-weight: bold;
+/* Style the Streamlit Expander to match your tech theme */
+    .streamlit-expanderHeader {
+        background-color: #1f2937 !important;
+        color: #ba0c2f !important; /* UGA Red for the Title */
+        font-weight: bold !important;
+        font-size: 1.2em !important;
+        border-radius: 8px !important;
     }
 
-    .company-name {
-        color: #fafafa;
-        font-size: 1.1em;
-        font-weight: 500;
-    }
-
-    .exp-date {
-        color: #9ca3af;
-        font-size: 0.9em;
-        font-style: italic;
-    }
-
-    .exp-bullets {
-        color: #d1d5db;
-        font-size: 0.95em;
-        line-height: 1.6;
-        margin-top: 10px;
+    .streamlit-expanderContent {
+        background-color: #111827 !important; /* Darker interior */
+        color: #d1d5db !important;
+        border-radius: 0 0 8px 8px !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -218,14 +195,15 @@ def render_publication(title, journal, link):
 
 def render_experience(role, company, date, description_bullets):
     bullets_html = "".join([f"<li>{bullet}</li>" for bullet in description_bullets])
+    
     exp_html = f"""
     <div class="exp-card">
         <div class="exp-header">
-            <div class="role-title">{role}</div>
-            <div class="exp-date">{date}</div>
+            <div style="color: #ba0c2f; font-size: 1.4em; font-weight: bold;">{role}</div>
+            <div style="color: #9ca3af; font-size: 0.9em; font-style: italic; min-width: 150px; text-align: right;">{date}</div>
         </div>
-        <div class="company-name">{company}</div>
-        <ul class="exp-bullets">
+        <div style="color: #fafafa; font-size: 1.1em; font-weight: 500; margin-top: 5px;">{company}</div>
+        <ul style="color: #d1d5db; font-size: 0.95em; line-height: 1.6; margin-top: 15px; padding-left: 20px;">
             {bullets_html}
         </ul>
     </div>
@@ -384,63 +362,45 @@ with colorg3:
 with colorg4:
     render_org_card("assets/aviation.png", "UGA Aviation Club", "Vice President", "https://ugaaviationclub.com/")
 
-## PERSONAL PROJECTS
-st.space("medium")
-st.markdown("# 🪚 Personal Projects")
-
 # --- WORK EXPERIENCE ---
 st.markdown("---")
 st.markdown("# 💼 Work Experience")
+st.space("small")
 
-render_experience(
-    "Graduate Research & Teaching Assistant",
-    "UGA College of Engineering",
-    "May 2023 - Present",
-    [
-        "Developed Automated AI Computer Vision Fruit Sorting system for GA AI in Manufacturing Project.",
-        "Directed team for Hardware & Software integration of Innovation Factory Cyber-Physical Assembly Testbed.",
-        "Supervised capstone projects for MiR200/UR-10 integration and process improvements at SMI Composites."
-    ]
-)
+# 1. Graduate Research & Teaching Assistant
+with st.expander("🎓  Graduate Research & Teaching Assistant | UGA College of Engineering| 2023-Present", expanded=True):
+    st.markdown("### UGA College of Engineering")
+    st.write("- Developed Automated AI Computer Vision Fruit Sorting system for Georgia AI in Manufacturing Project. [cite: 26]")
+    st.write("- Directed team for Hardware & Software integration of Innovation Factory Cyber-Physical Assembly Testbed. [cite: 26]")
+    st.write("- Supervised capstone projects for MiR200/UR-10 integration and process improvements at SMI Composites. [cite: 26]")
 
-render_experience(
-    "Director",
-    "UGA Create Labs",
-    "Jan 2022 - Jan 2024",
-    [
-        "Managed a $50,000 lab buildout to increase prototyping and manufacturing capabilities.",
-        "Led project to design mechanism for collection of water samples from a UAV.",
-        "Recruited, onboarded, and trained 8 additional members to add diverse capabilities to the lab."
-    ]
-)
+# 2. Director - UGA Create Labs
+with st.expander("🛠️  Director | UGA Create Labs | 2022-2024"):
+    st.markdown("### UGA Create Labs")
+    st.write("- Managed a $50,000 Lab buildout for Create Labs to increase prototyping and manufacturing capabilities. [cite: 30]")
+    st.write("- Led successful project to design mechanism for collection of water samples from a UAV. [cite: 30]")
+    st.write("- Recruited, onboarded, and trained 8 additional members to add diverse capabilities to the lab. [cite: 30]")
 
-render_experience(
-    "Lab Manager",
-    "UGA Innovation Factory",
-    "Jan 2022 - Jan 2023",
-    [
-        "Responsible for facility activities, including recruitment, hiring, and project management.",
-        "Advised projects involving robotics, computer vision, additive manufacturing, and industrial IOT.",
-        "Upgraded assembly line to increase data collection and analysis capabilities."
-    ]
-)
+# 3. Lab Manager - Innovation Factory
+with st.expander("🏭  Lab Manager | UGA Innovation Factory | 2022-2023"):
+    st.markdown("### UGA Innovation Factory")
+    st.write("- Responsible for facility activities, including recruitment, hiring, and project management. [cite: 33]")
+    st.write("- Advised projects involving robotics, computer vision, additive manufacturing, and industrial IOT. [cite: 33]")
+    st.write("- Successfully led project to upgrade assembly line to increase data collection capabilities. [cite: 33]")
 
-render_experience(
-    "Manufacturing Engineering Intern",
-    "Price Industries",
-    "May 2022 - Aug 2022",
-    [
-        "Performed process analysis and created assembly process reports for multiple products.",
-        "Conducted logistics efficiency studies to improve product tracking throughout assembly."
-    ]
-)
+# 4. Manufacturing Engineering Intern
+with st.expander("⚙️  Manufacturing Engineering Intern | Price Industries | 2022"):
+    st.markdown("### Price Industries")
+    st.write("- Performed process analysis for multiple products and created assembly process reports. [cite: 35]")
+    st.write("- Performed logistics efficiency study aimed to improve product tracking throughout the assembly process. [cite: 37]")
 
-render_experience(
-    "Lead Project Management Co-op",
-    "McKenney's Inc.",
-    "Jun 2020 - Aug 2021",
-    [
-        "Assisted in $500,000 equipment installation in an active retail center.",
-        "Designed a system to record and organize maintenance reports for the company’s largest account."
-    ]
-)
+# 5. Lead Project Management Co-op
+with st.expander("📋  Lead Project Management Co-op | McKenney's Inc. | 2020-2021"):
+    st.markdown("### McKenney's Inc.")
+    st.write("- Assisted management with a $500,000 equipment installation in an active retail center. [cite: 40]")
+    st.write("- Designed a system that organized maintenance reports for the company's largest service account. [cite: 40]")
+    st.write("- Led the department's intern team, delegating tasks and training interns as needed. [cite: 40]")
+
+## PERSONAL PROJECTS
+st.space("medium")
+st.markdown("# 🪚 Personal Projects")
