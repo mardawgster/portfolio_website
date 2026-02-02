@@ -4,3 +4,7 @@ pandas
 os-sys
 pybase64
 streamlit-image-comparison
+opencv-python
+numpy
+scikit-image
+matplotlib

@@ -383,7 +383,7 @@ with st.expander("🐚  Founder & CEO | Cerithium Engineering | 2023-Present"):
     st.markdown("##### A boutique engineering consultancy specializing in delivering advanced manufacturing and prototyping solutions to clients across diverse industrial sectors, leveraging cutting-edge technologies to drive innovation and operational excellence")
     st.write("- Founded and scaled a successful engineering consultancy, securing and executing projects in construction, historical preservation, and consumer products sectors")
     st.write("- Led end-to-end project lifecycles for diverse clients, from initial needs assessment and solution design to implementation")
-    st.write("- Leveraged 3D LIDAR scanning and additive manufacturing technology to create precise recreation of historical building facades, enabling accurate restoration planning and preservation of architectural heritage")
+    st.write("- Leveraged 3D scanning and additive manufacturing technology to create precise recreation of historical items, enabling accurate restoration planning and preservation of architectural heritage")
 
 # 3. Founder & Chief Engineer - UGA Create Labs
 with st.expander("🗜️  Founder & Chief Engineer | Create Engineering | 2022-2024"):
