@@ -3,8 +3,8 @@ Pillow
 pandas
 os-sys
 pybase64
-streamlit-image-comparison
-opencv-python
-numpy
+opencv-python-headless
 scikit-image
 matplotlib
+numpy
+streamlit-image-comparison
