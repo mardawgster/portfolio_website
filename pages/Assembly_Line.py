@@ -29,8 +29,8 @@ with col1main1:
 
 with col2main1:
     st.markdown("""
-    ### HEADLINE
-    This project demonstrates
+    ### An Advanced Assembly Testbed for Manufacturing Research & Teaching
+    This project demonstrates the design and development of the IF-CPAT, a flexible & accessible cyber-physical assembly testbed for manual assembly research & teaching.
     
     **Key Engineering Achievements:**
     * **Manual Assembly Research:** Built for manual assembly research, with a focus on human-robot collaboration, cybersecurity, multimodal sensing, and data collection for machine learning applications in manufacturing
