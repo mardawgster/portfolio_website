@@ -22,7 +22,7 @@ with col1main1:
     with open("assets/assy_line.jpeg", "rb") as file:
         st.download_button("Download Full Documentation", data=file, mime="application/pdf")
     vig_photo = Image.open("assets/assy_line.jpeg")
-    rot_vig_photo = vig_photo.rotate(270, expand=True)
+    #rot_vig_photo = vig_photo.rotate(270, expand=True)
     st.image(rot_vig_photo, caption="One of Six Stations of the Assembly Line Testbed")
 
 
