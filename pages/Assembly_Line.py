@@ -33,10 +33,10 @@ with col2main1:
     This project demonstrates
     
     **Key Engineering Achievements:**
-    * **ACH 1:** DESC 1
-    * **ACH 2:** DESC 2
-    * **ACH 3:** DESC 3
-    * **ACH 4:** DESC 4
+    * **Manual Assembly Research:** Built for manual assembly research, with a focus on human-robot collaboration, cybersecurity, multimodal sensing, and data collection for machine learning applications in manufacturing
+    * **Dataset Collection:** Designed to collect a large, multimodal dataset of human assembly activities, including video, audio, and sensor data from the assembly line
+    * **Accessible Framework:** Built using accessible, flexible, open-source tools to enable replication and extension by the research community
+    * **Multimodal Sensor Streams:** Integrated multiple sensor streams, including video, audio, part inventory levels, operator location, environmental conditions, operator hand movement, physiological data, along with actuator feedback, to enable comprehensive analysis of human assembly activities and human-robot collaboration dynamics 
     """)
     
     # Demo Video
