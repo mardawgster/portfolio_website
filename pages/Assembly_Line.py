@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 # Page Config
-st.set_page_config(page_title="PAGE TITLE", layout="wide")
+st.set_page_config(page_title="Assembly Line", layout="wide")
 
 # --- HEADER SECTION ---
 col1head, col2head = st.columns([10, 1])
@@ -18,7 +18,7 @@ col1main1, col2main1 = st.columns([1, 2])
 
 with col1main1:
     st.write("**Tech Stack:**")
-    st.code("IOT Hub: Home Assistant w/ Proxmox VE\nEdge Control: ESP32\nProgramming: ESPHome, Arduino, Python\nCOMMS: ESPHome TCP API, MQTT")
+    st.code("IOT: Home Assistant w/ Proxmox VE\nEdge Control: ESP32\nProgramming: ESPHome, Arduino, Python\nDatabase: InfluxDB\nCOMMS: ESPHome TCP API, MQTT")
     with open("assets/assy_line.jpeg", "rb") as file:
         st.download_button("Download Full Documentation", data=file, mime="application/pdf")
     vig_photo = Image.open("assets/assy_line.jpeg")
@@ -29,7 +29,7 @@ with col1main1:
 
 with col2main1:
     st.markdown("""
-    ### An Advanced Assembly Testbed for Research
+    ### An Advanced Assembly Research Testbed
     This project demonstrates the design and development of the IF-CPAT, a flexible & accessible cyber-physical assembly testbed for manual assembly research & teaching.
     
     **Key Engineering Achievements:**
