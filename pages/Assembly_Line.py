@@ -29,7 +29,7 @@ with col1main1:
 
 with col2main1:
     st.markdown("""
-    ### An Advanced Assembly Testbed for Manufacturing Research & Teaching
+    ### An Advanced Assembly Testbed for Research
     This project demonstrates the design and development of the IF-CPAT, a flexible & accessible cyber-physical assembly testbed for manual assembly research & teaching.
     
     **Key Engineering Achievements:**
