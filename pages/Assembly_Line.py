@@ -18,7 +18,7 @@ col1main1, col2main1 = st.columns([1, 2])
 
 with col1main1:
     st.write("**Tech Stack:**")
-    st.code("")
+    st.code("IOT Hub: Home Assistant\nEdge Compute: ESP32\nSensors:Cantilever Load Cell w/ HX711, mm Wave Radar Sensor, Aranet4 Environmental Sensor, Inertial Measurement Units, Cameras\nActuators: NeoPixel LEDs, Speakers\nProgramming: ESPHome, Arduino, Python, MQTT")
     with open("assets/FILE_PATH", "rb") as file:
         st.download_button("Download Full Documentation", data=file, mime="application/pdf")
     vig_photo = Image.open("assets/FILE_PATH")
