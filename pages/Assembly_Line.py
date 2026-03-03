@@ -18,12 +18,12 @@ col1main1, col2main1 = st.columns([1, 2])
 
 with col1main1:
     st.write("**Tech Stack:**")
-    st.code("IOT Hub: Home Assistant w/ Proxmox VE\nEdge Control: ESP32\nProgramming: ESPHome, Arduino, Python, MQTT")
+    st.code("IOT Hub: Home Assistant w/ Proxmox VE\nEdge Control: ESP32\nProgramming: ESPHome, Arduino, Python\nCOMMS: ESPHome TCP API, MQTT")
     with open("assets/assy_line.jpeg", "rb") as file:
         st.download_button("Download Full Documentation", data=file, mime="application/pdf")
     vig_photo = Image.open("assets/assy_line.jpeg")
     #rot_vig_photo = vig_photo.rotate(270, expand=True)
-    st.image(rot_vig_photo, caption="One of Six Stations of the Assembly Line Testbed")
+    st.image(vig_photo, caption="One of Six Stations of the Assembly Line Testbed")
 
 
 
