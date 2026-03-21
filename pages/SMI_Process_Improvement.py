@@ -18,7 +18,7 @@ col1main1, col2main1 = st.columns([1, 2])
 
 with col1main1:
     st.write("**Tech Stack:**")
-    st.code("CAD: Fusion 360\n FDM AM: Carbon Fiber Infused Nylon PA12,\nPETG, PLA\n SLA AM: Rigid 10k Resin")
+    st.code("CAD: Fusion 360\n AM: PA12-CF, PETG, PLA, Rigid 10k Resin")
     # with open("assets/vignette_docs.pdf", "rb") as file:
     #     st.download_button("Download Full Documentation", data=file, mime="application/pdf")
     vig_photo = Image.open("assets/smi_tools.png")
