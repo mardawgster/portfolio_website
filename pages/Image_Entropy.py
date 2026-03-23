@@ -5,8 +5,11 @@ import matplotlib.pyplot as plt
 from skimage.feature import graycomatrix, graycoprops
 from skimage.measure import shannon_entropy
 import tempfile
+from modules.nav import Navbar
 
 st.set_page_config(page_title="Video Entropy Analyzer", layout="wide")
+
+Navbar()
 
 st.title("🎬 Video Entropy Analyzer")
 st.markdown("""

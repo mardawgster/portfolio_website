@@ -1,9 +1,12 @@
 import streamlit as st
 from PIL import Image
 from streamlit_image_comparison import image_comparison
+from modules.nav import Navbar
 
 # Page Config
 st.set_page_config(page_title="SCOUT Robot Dog", layout="wide")
+
+Navbar()
 
 # --- HEADER SECTION ---
 col1head, col2head = st.columns([4, 1])

@@ -1,8 +1,12 @@
 import streamlit as st
 from PIL import Image
 
+from modules.nav import Navbar
+
 # Page Config
 st.set_page_config(page_title="Fruit Sorting Project", layout="wide")
+
+Navbar()
 
 # --- HEADER SECTION ---
 col1head, col2head = st.columns([10, 1])
