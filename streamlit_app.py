@@ -5,7 +5,7 @@ import os
 import io
 
 # Page Config (Must be first)
-st.set_page_config(page_title="Home", layout="wide", initial_sidebar_state="collapsed", page_icon="assets/Headshot.png")
+st.set_page_config(page_title="Home", page_name="Home", layout="wide", initial_sidebar_state="collapsed", page_icon="assets/Headshot.png")
 
 ## CSS
 st.markdown("""
