@@ -53,5 +53,5 @@ with col2main1:
 # --- SKILLS & RESEARCH ---
 st.divider()
 st.header("Skills Used in Project")
-st.write("- **Hardware:** ")
-st.write("- **Software:** ")
+st.write("- **Hardware:** Unitree Go2 EDU, Jetson Orin Nano, Vulcan UHF RFID Scanner, Unitree 4D LiDAR")
+st.write("- **Software:** Python, Unitree ROS SDK, Vulcan RFID SDK")
