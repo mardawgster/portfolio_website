@@ -24,7 +24,7 @@ with col1main1:
     st.write("**Tech Stack:**")
     st.code("CV: YOLOv11\nEdge: ESP32 & M4 Mac Mini\nLogic: Python & Arduino(C++)\nCOM Protocol: MQTT/Mosquitto")
     with open("assets/vignette_docs.pdf", "rb") as file:
-        st.download_button("Download Full Documentation", data=file, mime="application/pdf")
+        st.download_button("Download Full Documentation", use_container_width=True, data=file, mime="application/pdf")
     vig_photo = Image.open("assets/vignette_photo.jpeg")
     st.image(vig_photo, caption="The fully integrated sorting station.")
 

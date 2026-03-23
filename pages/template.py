@@ -22,8 +22,11 @@ col1main1, col2main1 = st.columns([1, 2])
 with col1main1:
     st.write("**Tech Stack:**")
     st.code("")
-    with open("assets/FILE_PATH", "rb") as file:
-        st.download_button("Download Full Documentation", data=file, mime="application/pdf")
+## Link Button
+#    st.link_button(url="LINK", use_container_width=True, label="LINK LABEL")
+## File Download Button
+#    with open("assets/FILE_PATH", "rb") as file:
+#        st.download_button("Download Full Documentation", use_container_width=True, data=file, mime="application/pdf")
     vig_photo = Image.open("assets/FILE_PATH")
     rot_vig_photo = vig_photo.rotate(270, expand=True)
     st.image(rot_vig_photo, caption="IMAGE CAPTION")
