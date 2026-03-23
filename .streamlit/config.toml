@@ -1,6 +1,6 @@
 [client]
 pageHideFooter = true
-ShowSidebarNavigation = false
+showSidebarNavigation = false
 
 [UI]
 hideTopBar = true

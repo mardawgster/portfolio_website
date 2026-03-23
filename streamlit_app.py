@@ -3,20 +3,12 @@ from PIL import Image
 import base64
 import os
 import io
+from modules.nav import Navbar
 
-# Page Config (Must be first)
+# Page Config
 st.set_page_config(page_title="Home", layout="wide", initial_sidebar_state="collapsed", page_icon="assets/Headshot.png")
 
-with st.sidebar:
-    st.page_link('streamlit_app.py', label='Home', icon='🏠')
-    st.page_link('pages/Additive_Manufacturing_Demo.py', label='Additive Manufacturing Demo', icon='🖨️')
-    st.page_link('pages/Assembly_Artifact.py', label='Cyber-Physical Assembly Line', icon='🛠️')
-    st.page_link('pages/Lemon_Sorter.py', label='Automated Lemon Sorter', icon='🍋')
-    st.page_link('pages/SCOUT_Robot_Dog.py', label='SCOUT Robot Dog', icon='🐶')
-    st.page_link('pages/Image_Entropy.py', label='Video Entropy Analyzer', icon='🎬')
-
-st.title(f'Welcome to My Portfolio! 👋')
-
+Navbar()
 
 ## CSS
 st.markdown("""
