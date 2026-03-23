@@ -1,3 +1,12 @@
+[client]
+pageHideFooter = false
+
+[UI]
+hideTopBar = false
+
+[logger]
+level = "info"
+
 [theme]
 primaryColor = "#ba0c2f"          # UGA Red
 backgroundColor = "#0e1117"       # Deep tech charcoal
