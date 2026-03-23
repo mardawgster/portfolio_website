@@ -2,12 +2,12 @@ import streamlit as st
 from PIL import Image
 
 # Page Config
-st.set_page_config(page_title="Lemon Sorting Project", layout="wide")
+st.set_page_config(page_title="Fruit Sorting Project", layout="wide")
 
 # --- HEADER SECTION ---
 col1head, col2head = st.columns([10, 1])
 with col1head:
-    st.title("Lemon Sorting Project")
+    st.title("Fruit Sorting Station for Quality Control in Agriculture")
 
 with col2head:
     st.page_link("streamlit_app.py", label="Home 🏠")

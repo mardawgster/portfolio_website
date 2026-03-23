@@ -3,7 +3,7 @@ from PIL import Image
 from streamlit_image_comparison import image_comparison
 
 # Page Config
-st.set_page_config(page_title="PAGE TITLE", layout="wide")
+st.set_page_config(page_title="SCOUT_Robot_Dog", layout="wide")
 
 # --- HEADER SECTION ---
 col1head, col2head = st.columns([4, 1])
@@ -19,7 +19,7 @@ col1main1, col2main1 = st.columns([1, 2])
 
 with col1main1:
     st.write("**Tech Stack:**")
-    st.code("**Hardware:** Unitree Go2 EDU, Jetson Orin Nano,\nVulcan UHF RFID Scanner, Unitree 4D LiDAR\n**Software:** Python, Unitree ROS SDK")
+    st.code("Hardware: Unitree Go2 EDU, Jetson Orin Nano,\nVulcan UHF RFID Scanner, Unitree 4D LiDAR\nSoftware: Python, Unitree ROS SDK")
     # with open("assets/FILE_PATH", "rb") as file:
     #     st.download_button("Download Full Documentation", data=file, mime="application/pdf")
     scout_photo = Image.open("assets/scout.jpeg")

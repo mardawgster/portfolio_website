@@ -6,9 +6,9 @@ from skimage.feature import graycomatrix, graycoprops
 from skimage.measure import shannon_entropy
 import tempfile
 
-st.set_page_config(page_title="Video Texture Analyzer", layout="wide")
+st.set_page_config(page_title="Video Entropy Analyzer", layout="wide")
 
-st.title("🎬 Haralick Feature Extractor")
+st.title("🎬 Video Entropy Analyzer")
 st.markdown("""
 Upload a video to analyze texture complexity (Entropy) and local variation (Contrast) over time. 
 *Note: Processing every frame can be slow for long videos.*
