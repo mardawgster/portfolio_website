@@ -33,14 +33,14 @@ with col1main1:
 
 with col2main1:
     st.markdown("""
-    ### HEADLINE
+    ### A Flexible Robot Inventory Localization System for Warehouse Environments
     This project demonstrates the design and development of SCOUT, a mobile robot inventory localization system for warehouse environments, utilizing a Unitree Go2 EDU quadruped robot equipped with a Jetson Orin Nano, Vulcan UHF RFID scanner, and Unitree 4D LiDAR.
     
     **Key Engineering Achievements:**
     * **Novel Localization Method:** Developed a novel inventory localization method that fuses LiDAR-based SLAM with RFID signal strength data to achieve accurate inventory localization in dynamic warehouse environments 
     * **Custom Mounting Solution:** Designed and implemented a custom mounting solution for the RFID scanner and LiDAR sensor on the robot chassis, ensuring optimal sensor placement for inventory scanning while maintaining robot mobility and stability
-    * **:** 
-    * **:** 
+    * **Robust Communication Protocol:** Implemented a robust communication protocol between the robot and the central control system, enabling real-time data exchange and remote monitoring of the inventory localization process
+    * **Adaptive Control Algorithm:** Implemented an adaptive control algorithm that allows the robot to navigate dynamically changing warehouse environments while maintaining optimal inventory localization accuracy
     """)
     
     # Demo Video
