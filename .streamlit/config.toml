@@ -1,8 +1,8 @@
 [client]
-pageHideFooter = false
+pageHideFooter = true
 
 [UI]
-hideTopBar = false
+hideTopBar = true
 
 [logger]
 level = "info"
