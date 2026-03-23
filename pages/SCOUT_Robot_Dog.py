@@ -40,7 +40,6 @@ with col2main1:
     * **Novel Localization Method:** Developed a novel inventory localization method that fuses LiDAR-based SLAM with RFID signal strength data to achieve accurate inventory localization in dynamic warehouse environments 
     * **Custom Mounting Solution:** Designed and implemented a custom mounting solution for the RFID scanner and LiDAR sensor on the robot chassis, ensuring optimal sensor placement for inventory scanning while maintaining robot mobility and stability
     * **Robust Communication Protocol:** Implemented a robust communication protocol between the robot and the central control system, enabling real-time data exchange and remote monitoring of the inventory localization process
-    * **Adaptive Control Algorithm:** Implemented an adaptive control algorithm that allows the robot to navigate dynamically changing warehouse environments while maintaining optimal inventory localization accuracy
     """)
     
     # Demo Video
