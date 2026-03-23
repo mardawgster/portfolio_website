@@ -24,7 +24,7 @@ with col1main1:
     st.write("**Tech Stack:**")
     st.code("Hardware: Unitree Go2 EDU, Jetson Orin Nano,\nVulcan UHF RFID Scanner, Unitree 4D LiDAR\nSoftware: Python, Unitree ROS SDK")
     ## Link to Paper
-    st.link_button("https://www.sciencedirect.com/science/article/pii/S2213846325002081", label="Read Full Paper 📄")
+    st.link_button(url="https://www.sciencedirect.com/science/article/pii/S2213846325002081", label="Read Full Paper 📄")
 
     scout_photo = Image.open("assets/scout.jpeg")
     st.image(scout_photo, caption="SCOUT Inventory Localization System")
