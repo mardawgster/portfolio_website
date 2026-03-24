@@ -41,9 +41,6 @@ with col2main1:
     * **Accessible Framework:** Built using accessible, flexible, open-source tools to enable replication and extension by the research community
     * **Multimodal Sensor Streams:** Integrated multiple sensor streams, including video, audio, part inventory levels, operator location, environmental conditions, operator hand movement, physiological data, along with actuator feedback, to enable comprehensive analysis of human assembly activities and human-robot collaboration dynamics 
     """)
-    
-    # Demo Video
-    st.video("VIDEO_LINK") 
 
 # --- SKILLS & RESEARCH ---
 st.divider()
