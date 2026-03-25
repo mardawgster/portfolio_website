@@ -8,3 +8,6 @@ scikit-image
 matplotlib
 numpy
 streamlit-image-comparison
+plotly
+scipy
+EntropyHub
