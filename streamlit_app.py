@@ -13,12 +13,34 @@ Navbar()
 ## CSS
 st.markdown("""
     <style>
-    /* Centering the column content */
-    [data-testid="stVerticalBlock"] > div:has(div.stMarkdown) {
+    /* Centering the column content - but NOT inside expanders */
+    [data-testid="stVerticalBlock"] > div:has(div.stMarkdown):not(.streamlit-expanderContent *) {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    /* Explicitly left-align content inside expanders */
+    .streamlit-expanderContent {
+        background-color: #111827 !important;
+        color: #d1d5db !important;
+        border-radius: 0 0 8px 8px !important;
+        text-align: left !important;
+    }
+
+    .streamlit-expanderContent > div {
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+
+    .streamlit-expanderContent p {
+        text-align: left !important;
+    }
+
+    .streamlit-expanderContent [data-testid="stVerticalBlock"] > div {
+        text-align: left !important;
+        align-items: flex-start !important;
     }
 
     /* The Hover Flare Effect */
@@ -146,12 +168,6 @@ st.markdown("""
         font-weight: bold !important;
         font-size: 1.2em !important;
         border-radius: 8px !important;
-    }
-
-    .streamlit-expanderContent {
-        background-color: #111827 !important; /* Darker interior */
-        color: #d1d5db !important;
-        border-radius: 0 0 8px 8px !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -427,10 +443,10 @@ st.markdown("# 🪚 Personal Projects")
 # 1996 Seadoo GTX Restoration
 with st.expander("🚤  1996 Seadoo GTX Restoration"):
     st.markdown("### A Comprehensive Restoration of a Classic Jet Ski")
-    st.write("- Undertook a comprehensive restoration of a 1996 Seadoo GTX, addressing extensive corrosion and mechanical degradation to return the watercraft to operational condition")
-    st.write("- Engineered custom replacement mounts using 3D modeling and additive manufacturing techniques to replicate obsolete parts, ensuring functional integrity while preserving the original design")
-    st.write("- Rebuilt the engine, oil pump, and carburetor, and reupholstered the seats restoring full power performance, and aesthetics to the jet ski.")
-    st.write("- Replaced fuel lines, oil lines, jet pump, battery, ignition coil, starter, drive shaft, carbon seal, spark plugs and impeller, resulting in a fully restored and operational jet ski")
+    st.markdown("- Undertook a comprehensive restoration of a 1996 Seadoo GTX, addressing extensive corrosion and mechanical degradation to return the watercraft to operational condition")
+    st.markdown("- Engineered custom replacement mounts using 3D modeling and additive manufacturing techniques to replicate obsolete parts, ensuring functional integrity while preserving the original design")
+    st.markdown("- Rebuilt the engine, oil pump, and carburetor, and reupholstered the seats restoring full power performance, and aesthetics to the jet ski.")
+    st.markdown("- Replaced fuel lines, oil lines, jet pump, battery, ignition coil, starter, drive shaft, carbon seal, spark plugs and impeller, resulting in a fully restored and operational jet ski")
     ## Images with 90 degree rotation to fit the layout better
     col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
