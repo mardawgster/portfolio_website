@@ -14,33 +14,40 @@ Navbar()
 st.markdown("""
     <style>
     /* Centering the column content - but NOT inside expanders */
-    [data-testid="stVerticalBlock"] > div:has(div.stMarkdown):not(.streamlit-expanderContent *) {
+    [data-testid="stVerticalBlock"] > div:has(div.stMarkdown) {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    /* Explicitly left-align content inside expanders */
+    /* OVERRIDE: Force left-align EVERYTHING inside expanders */
+    .streamlit-expanderContent,
+    .streamlit-expanderContent * {
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+
     .streamlit-expanderContent {
         background-color: #111827 !important;
         color: #d1d5db !important;
         border-radius: 0 0 8px 8px !important;
+    }
+
+    /* Ensure all text elements inside expanders are left-aligned */
+    .streamlit-expanderContent p,
+    .streamlit-expanderContent li,
+    .streamlit-expanderContent ul,
+    .streamlit-expanderContent [data-testid="stMarkdown"],
+    .streamlit-expanderContent [role="paragraph"] {
         text-align: left !important;
     }
 
-    .streamlit-expanderContent > div {
-        text-align: left !important;
-        align-items: flex-start !important;
-    }
-
-    .streamlit-expanderContent p {
-        text-align: left !important;
-    }
-
+    /* Override any flex containers inside expanders */
+    .streamlit-expanderContent [data-testid="stVerticalBlock"],
     .streamlit-expanderContent [data-testid="stVerticalBlock"] > div {
-        text-align: left !important;
-        align-items: flex-start !important;
+        display: block !important;
+        align-items: unset !important;
     }
 
     /* The Hover Flare Effect */
@@ -351,6 +358,86 @@ render_publication(
     "Manufacturing Letters / 53rd SME North American Manufacturing Research Conference",
     "https://www.sciencedirect.com/science/article/pii/S2213846325002081"
 )
+
+# --- WORK EXPERIENCE ---
+st.markdown("---")
+st.markdown("# 💼 Work Experience")
+st.space("small")
+
+# 1. Graduate Research & Teaching Assistant
+with st.expander("🎓  Graduate Research & Teaching Assistant | UGA College of Engineering | 2023-Present", expanded=True):
+    st.markdown("""
+    <div style="text-align: left; padding: 10px;">
+    <h3 style="text-align: left;">University of Georgia College of Engineering</h3>
+    <h5 style="text-align: left;">A Tier-1 research institution and a rapidly growing hub for interdisciplinary engineering, dedicated to bridging the gap between theoretical AI research and scalable industrial applications within the Georgia AI in Manufacturing (GA-AIM) ecosystem</h5>
+    <p style="text-align: left;">- Architected a robust Computer Vision pipeline for the Georgia AI in Manufacturing (Georgia AIM) project, utilizing YOLOv11 architectures and multi-modal sensor inputs to automate complex quality assurance tasks</p>
+    <p style="text-align: left;">- Architected the Hardware & Software integration for the Innovation Factory's Cyber-Physical Assembly Testbed, bridging real-time industrial sensors with digital-twin frameworks for advanced process monitoring and control</p>
+    <p style="text-align: left;">- Mentored senior capstone teams in the multi-platform integration of MiR200 AMRs and UR-10 collaborative robots, automating material transport and assembly workflows for high-precision manufacturing applications</p>
+    <p style="text-align: left;">- Developed and delivered curriculum for undergraduate courses in Manufacturing Processes and Systems, incorporating hands-on labs and industry case studies to enhance student engagement and practical skills</p>
+    <p style="text-align: left;">- Directed engineering initiatives at SMI Composites to modernize additive manufacturing post-processing; pioneered a soda-blasting integration that significantly improved surface finish quality and cycle times</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# 2. Founder & CEO - Cerithium Engineering
+with st.expander("🐚  Founder & CEO | Cerithium Engineering | 2023-Present"):
+    st.markdown("""
+    <div style="text-align: left; padding: 10px;">
+    <h3 style="text-align: left;">Cerithium Engineering</h3>
+    <h5 style="text-align: left;">A boutique engineering consultancy specializing in delivering advanced manufacturing and prototyping solutions to clients across diverse industrial sectors, leveraging cutting-edge technologies to drive innovation and operational excellence</h5>
+    <p style="text-align: left;">- Founded and scaled a successful engineering consultancy, securing and executing projects in construction, historical preservation, and consumer products sectors</p>
+    <p style="text-align: left;">- Led end-to-end project lifecycles for diverse clients, from initial needs assessment and solution design to implementation</p>
+    <p style="text-align: left;">- Leveraged 3D scanning and additive manufacturing technology to create precise recreation of historical items, enabling accurate restoration planning and preservation of architectural heritage</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# 3. Founder & Chief Engineer - UGA Create Labs
+with st.expander("🗜️  Founder & Chief Engineer | Create Engineering | 2022-2024"):
+    st.markdown("""
+    <div style="text-align: left; padding: 10px;">
+    <h3 style="text-align: left;">CREATE Engineering</h3>
+    <h5 style="text-align: left;">A student-led innovation lab dedicated to empowering UGA students and faculty with advanced prototyping capabilities, fostering interdisciplinary collaboration, and driving experiential learning through hands-on projects</h5>
+    <p style="text-align: left;">- Spearheaded a $50,000 capital expansion for Create Engineering; orchestrated the procurement and commissioning of advanced manufacturing equipment to triple prototyping capacity</p>
+    <p style="text-align: left;">- Pioneered the development of a lightweight mechatronic sampling payload for UAVs, enabling autonomous water collection in remote or hazardous aquatic environments</p>
+    <p style="text-align: left;">- Scaled lab operations through the strategic recruitment and technical training of 8 cross-functional members, broadening the organization's R&D capabilities</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# 4. Lab Manager - Innovation Factory
+with st.expander("🥼  Lab Manager | UGA Innovation Factory | 2022-2023"):
+    st.markdown("""
+    <div style="text-align: left; padding: 10px;">
+    <h3 style="text-align: left;">UGA Innovation Factory</h3>
+    <h5 style="text-align: left;">A cutting-edge research facility focused on advancing smart manufacturing technologies through interdisciplinary collaboration, state-of-the-art equipment, and industry partnerships</h5>
+    <p style="text-align: left;">- Governed end-to-end facility operations, synchronizing preventative maintenance schedules for advanced manufacturing hardware with strategic project lifecycles</p>
+    <p style="text-align: left;">- Consulted on high-complexity R&D initiatives, providing technical steering for projects integrated with collaborative robotics (UR-10), computer vision, and Industrial IoT (IIoT) frameworks</p>
+    <p style="text-align: left;">- Directed facility-wide resource allocation, ensuring 100% operational uptime and optimizing lab operations to support a diverse portfolio of academic and industry projects</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# 5. Manufacturing Engineering Intern
+with st.expander("🏭  Manufacturing Engineering Intern | Price Industries | 2022"):
+    st.markdown("""
+    <div style="text-align: left; padding: 10px;">
+    <h3 style="text-align: left;">Price Industries</h3>
+    <h5 style="text-align: left;">A leading HVAC solutions provider specializing in innovative air distribution products and systems for commercial and industrial applications</h5>
+    <p style="text-align: left;">- Leveraged Lean manufacturing principles to redesign plant floor for Crestridge plant, optimizing spatial utilization and reducing transit times</p>
+    <p style="text-align: left;">- Executed a comprehensive cost-benefit analysis for the security grill product line, identifying key manufacturing overheads to drive high-margin production strategies</p>
+    <p style="text-align: left;">- Conducted a comprehensive logistics bottlenecks analysis, identifying key friction points to enhance real-time product traceability across the assembly lifecycle</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# 6. Lead Project Management Co-op
+with st.expander("🏗️  Lead Project Management Co-op | McKenney's Inc. | 2020-2021"):
+    st.markdown("""
+    <div style="text-align: left; padding: 10px;">
+    <h3 style="text-align: left;">McKenney's Inc.</h3>
+    <h5 style="text-align: left;">A premier contractor specializing in HVAC, plumbing, and controls systems for large-scale commercial construction projects across the Southeastern United States</h5>
+    <p style="text-align: left;">- Coordinated a $500,000 equipment deployment within an operational retail facility, mitigating downtime and ensuring zero disruption to active businesses</p>
+    <p style="text-align: left;">- Designed a data-driven maintenance tracking system, leveraging automated collection protocols to ensure 100% reporting compliance and visibility for the company's largest client</p>
+    <p style="text-align: left;">- Cultivated a high-performing intern cohort by directing daily operations and building a technical training curriculum that accelerated their contribution to departmental R&D goals</p>
+    </div>
+    """, unsafe_allow_html=True)
+
 ## ORGANIZATIONS
 
 def organization_card(image_path, title, subtitle, link):
@@ -381,60 +468,6 @@ with colorg3:
 with colorg4:
     render_org_card("assets/aviation.png", "UGA Aviation Club", "Vice President", "https://ugaaviationclub.com/")
 
-# --- WORK EXPERIENCE ---
-st.markdown("---")
-st.markdown("# 💼 Work Experience")
-st.space("small")
-
-# 1. Graduate Research & Teaching Assistant
-with st.expander("🎓  Graduate Research & Teaching Assistant | UGA College of Engineering | 2023-Present", expanded=True):
-    st.markdown("### University of Georgia College of Engineering")
-    st.markdown("##### A Tier-1 research institution and a rapidly growing hub for interdisciplinary engineering, dedicated to bridging the gap between theoretical AI research and scalable industrial applications within the Georgia AI in Manufacturing (GA-AIM) ecosystem")
-    st.write("- Architected a robust Computer Vision pipeline for the Georgia AI in Manufacturing (Georgia AIM) project, utilizing YOLOv11 architectures and multi-modal sensor inputs to automate complex quality assurance tasks")
-    st.write("- Architected the Hardware & Software integration for the Innovation Factory's Cyber-Physical Assembly Testbed, bridging real-time industrial sensors with digital-twin frameworks for advanced process monitoring and control")
-    st.write("- Mentored senior capstone teams in the multi-platform integration of MiR200 AMRs and UR-10 collaborative robots, automating material transport and assembly workflows for high-precision manufacturing applications")
-    st.write("- Developed and delivered curriculum for undergraduate courses in Manufacturing Processes and Systems, incorporating hands-on labs and industry case studies to enhance student engagement and practical skills")
-    st.write("- Directed engineering initiatives at SMI Composites to modernize additive manufacturing post-processing; pioneered a soda-blasting integration that significantly improved surface finish quality and cycle times")
-
-# 2. Founder & CEO - Cerithium Engineering
-with st.expander("🐚  Founder & CEO | Cerithium Engineering | 2023-Present"):
-    st.markdown("### Cerithium Engineering")
-    st.markdown("##### A boutique engineering consultancy specializing in delivering advanced manufacturing and prototyping solutions to clients across diverse industrial sectors, leveraging cutting-edge technologies to drive innovation and operational excellence")
-    st.write("- Founded and scaled a successful engineering consultancy, securing and executing projects in construction, historical preservation, and consumer products sectors")
-    st.write("- Led end-to-end project lifecycles for diverse clients, from initial needs assessment and solution design to implementation")
-    st.write("- Leveraged 3D scanning and additive manufacturing technology to create precise recreation of historical items, enabling accurate restoration planning and preservation of architectural heritage")
-
-# 3. Founder & Chief Engineer - UGA Create Labs
-with st.expander("🗜️  Founder & Chief Engineer | Create Engineering | 2022-2024"):
-    st.markdown("### CREATE Engineering")
-    st.markdown("##### A student-led innovation lab dedicated to empowering UGA students and faculty with advanced prototyping capabilities, fostering interdisciplinary collaboration, and driving experiential learning through hands-on projects")
-    st.write("- Spearheaded a $50,000 capital expansion for Create Engineering; orchestrated the procurement and commissioning of advanced manufacturing equipment to triple prototyping capacity")
-    st.write("- Pioneered the development of a lightweight mechatronic sampling payload for UAVs, enabling autonomous water collection in remote or hazardous aquatic environments")
-    st.write("- Scaled lab operations through the strategic recruitment and technical training of 8 cross-functional members, broadening the organization's R&D capabilities")
-
-# 4. Lab Manager - Innovation Factory
-with st.expander("🥼  Lab Manager | UGA Innovation Factory | 2022-2023"):
-    st.markdown("### UGA Innovation Factory")
-    st.markdown("##### A cutting-edge research facility focused on advancing smart manufacturing technologies through interdisciplinary collaboration, state-of-the-art equipment, and industry partnerships")
-    st.write("- Governed end-to-end facility operations, synchronizing preventative maintenance schedules for advanced manufacturing hardware with strategic project lifecycles")
-    st.write("- Consulted on high-complexity R&D initiatives, providing technical steering for projects integrated with collaborative robotics (UR-10), computer vision, and Industrial IoT (IIoT) frameworks")
-    st.write("- Directed facility-wide resource allocation, ensuring 100% operational uptime and optimizing lab operations to support a diverse portfolio of academic and industry projects")
-
-# 5. Manufacturing Engineering Intern
-with st.expander("🏭  Manufacturing Engineering Intern | Price Industries | 2022"):
-    st.markdown("### Price Industries")
-    st.markdown("##### A leading HVAC solutions provider specializing in innovative air distribution products and systems for commercial and industrial applications")
-    st.write("- Leveraged Lean manufacturing principles to redesign plant floor for Crestridge plant, optimizing spatial utilization and reducing transit times")
-    st.write("- Executed a comprehensive cost-benefit analysis for the security grill product line, identifying key manufacturing overheads to drive high-margin production strategies")
-    st.write("- Conducted a comprehensive logistics bottlenecks analysis, identifying key friction points to enhance real-time product traceability across the assembly lifecycle")
-
-# 6. Lead Project Management Co-op
-with st.expander("🏗️  Lead Project Management Co-op | McKenney's Inc. | 2020-2021"):
-    st.markdown("### McKenney's Inc.")
-    st.markdown("##### A premier contractor specializing in HVAC, plumbing, and controls systems for large-scale commercial construction projects across the Southeastern United States")
-    st.write("- Coordinated a $500,000 equipment deployment within an operational retail facility, mitigating downtime and ensuring zero disruption to active businesses")
-    st.write("- Designed a data-driven maintenance tracking system, leveraging automated collection protocols to ensure 100% reporting compliance and visibility for the company's largest client")
-    st.write("- Cultivated a high-performing intern cohort by directing daily operations and building a technical training curriculum that accelerated their contribution to departmental R&D goals")
 
 ## PERSONAL PROJECTS
 st.space("medium")
@@ -442,11 +475,15 @@ st.markdown("# 🪚 Personal Projects")
 
 # 1996 Seadoo GTX Restoration
 with st.expander("🚤  1996 Seadoo GTX Restoration"):
-    st.markdown("### A Comprehensive Restoration of a Classic Jet Ski")
-    st.markdown("- Undertook a comprehensive restoration of a 1996 Seadoo GTX, addressing extensive corrosion and mechanical degradation to return the watercraft to operational condition")
-    st.markdown("- Engineered custom replacement mounts using 3D modeling and additive manufacturing techniques to replicate obsolete parts, ensuring functional integrity while preserving the original design")
-    st.markdown("- Rebuilt the engine, oil pump, and carburetor, and reupholstered the seats restoring full power performance, and aesthetics to the jet ski.")
-    st.markdown("- Replaced fuel lines, oil lines, jet pump, battery, ignition coil, starter, drive shaft, carbon seal, spark plugs and impeller, resulting in a fully restored and operational jet ski")
+    st.markdown("""
+    <div style="text-align: left; padding: 10px;">
+    <h3 style="text-align: left;">A Comprehensive Restoration of a Classic Jet Ski</h3>
+    <p style="text-align: left;">- Undertook a comprehensive restoration of a 1996 Seadoo GTX, addressing extensive corrosion and mechanical degradation to return the watercraft to operational condition</p>
+    <p style="text-align: left;">- Engineered custom replacement mounts using 3D modeling and additive manufacturing techniques to replicate obsolete parts, ensuring functional integrity while preserving the original design</p>
+    <p style="text-align: left;">- Rebuilt the engine, oil pump, and carburetor, and reupholstered the seats restoring full power performance, and aesthetics to the jet ski.</p>
+    <p style="text-align: left;">- Replaced fuel lines, oil lines, jet pump, battery, ignition coil, starter, drive shaft, carbon seal, spark plugs and impeller, resulting in a fully restored and operational jet ski</p>
+    </div>
+    """, unsafe_allow_html=True)
     ## Images with 90 degree rotation to fit the layout better
     col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
