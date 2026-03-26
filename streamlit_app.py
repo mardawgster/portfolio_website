@@ -423,3 +423,24 @@ with st.expander("🏗️  Lead Project Management Co-op | McKenney's Inc. | 202
 ## PERSONAL PROJECTS
 st.space("medium")
 st.markdown("# 🪚 Personal Projects")
+
+# 1996 Seadoo GTX Restoration
+with st.expander("🚤  1996 Seadoo GTX Restoration"):
+    st.markdown("### A Comprehensive Restoration of a Classic Jet Ski")
+    st.write("- Undertook a comprehensive restoration of a 1996 Seadoo GTX, addressing extensive corrosion and mechanical degradation to return the watercraft to operational condition")
+    st.write("- Engineered custom replacement mounts using 3D modeling and additive manufacturing techniques to replicate obsolete parts, ensuring functional integrity while preserving the original design")
+    st.write("- Rebuilt the engine and carburetor, and reupholstered the seats restoring full power performance, and aesthetics to the jet ski.")
+    st.write("- Replaced fuel lines, oil lines, jet pump, battery, ignition coil, starter, drive shaft, carbon seal, spark plugs and impeller, resulting in a fully restored and operational jet ski")
+    ## Images
+    col1, col2, col3, col4, col5 = st.columns(5)
+    with col1:
+        st.image("assets/jet1.jpg", caption="The jet ski in its original condition, showing extensive degradation from years of neglect.")
+    with col2:
+        st.image("assets/jet2.jpg", caption="Taking the engine, oil tank, and other components out for rebuilding, replacement, and cleaning.")
+    with col3:
+        st.image("assets/jet3.jpg", caption="Rebuilt engine mounted inside the jet ski before other components were reinstalled.")
+    with col4:
+        st.image("assets/jet4.jpg", caption="The restored jet ski, with new upholstery, renovated plastic parts, and a fish finder.")
+    with col5:
+        st.video("assets/jet_vid.MOV", caption="The restored Seadoo GTX running at full power on the water.")
+
