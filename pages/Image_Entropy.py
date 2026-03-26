@@ -5,11 +5,14 @@ import tempfile
 import plotly.graph_objects as go
 from scipy.stats import entropy
 import EntropyHub as EH
+from modules.nav import Navbar
 
 st.set_page_config(page_title="Visual Entropy Video Analyzer", layout="wide")
 st.title("Multidimensional Visual Entropy Video Analyzer")
 
 st.write("""This tool is a part of an ongoing research project, allowing users to upload a video of an assembly process and analyzes the visual complexity of each frame to identify signatures of key events such as part placements, handoffs, and errors. By calculating multiple entropy measures, including Shannon, Tsallis, Renyi, and spatial entropies, the tool provides a comprehensive view of the visual information dynamics throughout the assembly process. The interactive player and synchronized charts enable users to explore the temporal evolution of visual complexity and correlate it with specific moments in the video, offering insights into operator behavior and assembly dynamics.""")
+
+Navbar()
 
 # 1. Accept uploaded video
 uploaded_video = st.file_uploader("Upload an assembly video", type=["mp4", "mov", "avi"])
