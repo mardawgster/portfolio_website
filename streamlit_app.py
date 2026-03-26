@@ -434,17 +434,17 @@ with st.expander("🚤  1996 Seadoo GTX Restoration"):
     ## Images with 90 degree rotation to fit the layout better
     col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
-        rot_jet1 = Image.open("assets/jet1.jpg").rotate(270, expand=True)
+        rot_jet1 = Image.open("assets/jet1.JPG").rotate(270, expand=True)
         st.image(rot_jet1, caption="The jet ski in its original condition, showing extensive degradation from years of neglect.")
     with col2:
-        rot_jet2 = Image.open("assets/jet2.jpg").rotate(270, expand=True)
+        rot_jet2 = Image.open("assets/jet2.JPG").rotate(270, expand=True)
         st.image(rot_jet2, caption="Taking the engine, oil tank, and other components out for rebuilding, replacement, and cleaning.")
     with col3:
-        rot_jet3 = Image.open("assets/jet3.jpg").rotate(270, expand=True)
+        rot_jet3 = Image.open("assets/jet3.JPG").rotate(270, expand=True)
         st.image(rot_jet3, caption="Rebuilt engine mounted inside the jet ski before other components were reinstalled.")
     with col4:
-        st.image("assets/jet5.jpg", caption="Installing the new jet pump and drive shaft.")
-        st.image("assets/jet4.jpg", caption="The restored jet ski, with new upholstery, renovated plastic parts, and a fish finder.")
+        st.image("assets/jet5.JPG", caption="Installing the new jet pump and drive shaft.")
+        st.image("assets/jet4.JPG", caption="The restored jet ski, with new upholstery, renovated plastic parts, and a fish finder.")
     with col5:
         st.video("assets/jet_vid.MOV")
 
