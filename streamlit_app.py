@@ -462,7 +462,7 @@ colorg1, colorg2, colorg3, colorg4 = st.columns(4)
 with colorg1:
     render_org_card("assets/ewbUga.jpg", "Engineers Without Borders @ UGA", "Co-founder & Vice President", "https://www.instagram.com/ewb.uga/")
 with colorg2:
-    render_org_card("assets/ugaMfg.png", "UGA Manufacturing Club", "Founder & Graduate Advisor", "https://www.instagram.com/uga.mfg/")
+    render_org_card("assets/smeuga.png", "Society of Manufacturing Engineers @ UGA", "Founder & Graduate Advisor", "https://uga-manufacturing-club.pages.dev/")
 with colorg3:
     render_org_card("assets/create.png", "Create Engineering", "Founder & Chief Engineer", "https://create.uga.edu/about/")
 with colorg4:
