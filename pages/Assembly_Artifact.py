@@ -31,23 +31,23 @@ with col1main1:
     
     # Update FILE_PATH to your actual image path
     vig_photo = Image.open("assets/artifact.png") 
-    rot_vig_photo = vig_photo.rotate(270, expand=True)
-    st.image(rot_vig_photo, caption="20mm T-slot Assembly Artifact with M5StickC Edge Node")
+#    rot_vig_photo = vig_photo.rotate(270, expand=True)
+    st.image(vig_photo, caption="20mm T-slot Assembly Artifact with M5StickC Edge Node")
 
 with col2main1:
     st.markdown("""
     ### Re-engineering Assembly Operations for Smart Manufacturing Research
-    This project replaces a discontinued, proprietary commercial oscillating tool with a fully open, rigorously designed cyber-physical assembly artifact. Built as a standardized data generation node for a smart manufacturing testbed, this artifact resolves the mechanical degradation and closed-ecosystem limitations of traditional tools. It serves as a highly modular, untethered IoT node capable of streaming multi-modal telemetry—functioning simultaneously as an ergonomic assembly workpiece, a quality-control data generator, and an active surface for cyber-physical security simulations.
+    This project replaces a discontinued, proprietary commercial oscillating tool with a fully open, rigorously designed cyber-physical assembly artifact. Built as a standardized data generation node for a smart manufacturing testbed, this artifact resolves the mechanical degradation and closed-ecosystem limitations of traditional tools. It serves as a highly modular, untethered IoT node capable of streaming multi-modal telemetry, functioning simultaneously as an ergonomic assembly workpiece, a quality-control data generator, and an active surface for cyber-physical security simulations.
     
     **Key Engineering Achievements:**
     - **Extreme Modularity & Replicability:** Designed using a 20mm T-slot extruded aluminum frame, metric hardware, and standardized 3D-printable components, ensuring infinite assembly/disassembly cycles without mechanical failure. 
-    - **Integrated Mechatronics & Edge Compute:** Features a custom two-pulley system (drive and encoder) monitored by an IR photointerrupter, directly wired to an onboard, battery-powered M5StickC Plus 2 (ESP32) microcontroller.
+    - **Integrated Mechatronics & Edge Compute:** Features a custom dual-pulley system (drive and encoder) monitored by an IR photointerrupter, directly wired to an onboard, battery-powered M5StickC Plus 2 (ESP32) microcontroller.
     - **Real-Time Telemetry & Digital Twin:** Utilizes ESPHome to process sensor data locally, publishing RPM metrics and live 3D orientation (via internal gyroscope/accelerometer) over MQTT directly to a central Home Assistant dashboard.
     - **Multi-Functional Experimental Utility:** Incorporates ergonomic fixturing handles for manual human-factors research while intentionally exposing network surfaces to allow researchers to inject and study simulated cyber-attacks.
     """)
     
     # Update VIDEO_LINK to your actual YouTube or hosted video URL
-    st.video("https://www.youtube.com/watch?v=YOUR_VIDEO_ID") 
+#    st.video("https://www.youtube.com/watch?v=YOUR_VIDEO_ID") 
 
 # --- SKILLS & RESEARCH ---
 st.divider()
