@@ -26,11 +26,11 @@ with col1main1:
     """)
     
     # Update FILE_PATH to your actual PDF documentation path
-    with open("assets/Artifact_Documentation.pdf", "rb") as file:
-        st.download_button("Download Full Documentation", data=file, mime="application/pdf")
+#    with open("assets/Artifact_Documentation.pdf", "rb") as file:
+#        st.download_button("Download Full Documentation", data=file, mime="application/pdf")
     
     # Update FILE_PATH to your actual image path
-    vig_photo = Image.open("assets/artifact_photo.jpg") 
+    vig_photo = Image.open("assets/artifact.png") 
     rot_vig_photo = vig_photo.rotate(270, expand=True)
     st.image(rot_vig_photo, caption="20mm T-slot Assembly Artifact with M5StickC Edge Node")
 
