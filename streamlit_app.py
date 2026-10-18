@@ -251,7 +251,7 @@ socials = [
     ("https://www.linkedin.com/in/marcusdibattista/", "assets/linkedin.png"),
     ("https://scholar.google.com/citations?user=ixBhetgAAAAJ", "assets/scholar.png"),
     ("https://www.thingiverse.com/MADmarcus/designs", "assets/thingiverse.png"),
-    ("https://www.youtube.com/@MarcusDiBattista", "assets/youtube.png")
+    ("https://www.youtube.com/@MarcusDiBattista", "assets/youtube.png"),
     ("https://github.com/mardawgster", "assets/github.png")
 ]
 
