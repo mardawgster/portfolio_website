@@ -49,5 +49,5 @@ with col2main1:
 # --- SKILLS & RESEARCH ---
 st.divider()
 st.header("Core Competencies")
-st.write("- **Hardware:** Pneumatics, Circuit Design, Embedded Systems, 3D Design & Printing")
-st.write("- **Software:** Python (OpenCV, YOLO), C++, MQTT, InfluxDB")
+st.write("- **Hardware:** Pneumatics, Circuit Design, Mechanical Design, Embedded Systems, 3D Design & Printing")
+st.write("- **Software:** Python (OpenCV, YOLO), C++, MQTT, InfluxDB, GitHub, Linux CLI")

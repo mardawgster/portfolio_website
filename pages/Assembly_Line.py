@@ -22,8 +22,8 @@ col1main1, col2main1 = st.columns([1, 2])
 with col1main1:
     st.write("**Tech Stack:**")
     st.code("IOT: Home Assistant w/ Proxmox VE\nEdge Control: ESP32\nProgramming: ESPHome, Arduino, Python\nDatabase: InfluxDB\nCOMMS: ESPHome TCP API, MQTT")
-    with open("assets/assy_line.jpeg", "rb") as file:
-        st.download_button("Download Full Documentation", use_container_width=True, data=file, mime="application/pdf")
+#    with open("assets/assy_line.jpeg", "rb") as file:
+#       st.download_button("Download Full Documentation", use_container_width=True, data=file, mime="application/pdf")
     vig_photo = Image.open("assets/assy_line.jpeg")
     #rot_vig_photo = vig_photo.rotate(270, expand=True)
     st.image(vig_photo, caption="One of Six Stations of the Assembly Line Testbed")
@@ -36,14 +36,14 @@ with col2main1:
     This project demonstrates the design and development of the IF-CPAT, a flexible & accessible cyber-physical assembly testbed for manual assembly research & teaching.
     
     **Key Engineering Achievements:**
-    * **Manual Assembly Research:** Built for manual assembly research, with a focus on human-robot collaboration, cybersecurity, multimodal sensing, and data collection for machine learning applications in manufacturing
+    * **Manual Assembly Research:** Built for manual assembly research, with a focus on human-robot collaboration, cybersecurity, lean teaching, multimodal sensing, and data collection for machine learning applications in manufacturing
     * **Dataset Collection:** Designed to collect a large, multimodal dataset of human assembly activities, including video, audio, and sensor data from the assembly line
-    * **Accessible Framework:** Built using accessible, flexible, open-source tools to enable replication and extension by the research community
+    * **Accessible Framework:** Built using accessible, flexible, open-source tools to enable replication and extension by the research community, and to facilitate the development of new assembly research methodologies and applications
     * **Multimodal Sensor Streams:** Integrated multiple sensor streams, including video, audio, part inventory levels, operator location, environmental conditions, operator hand movement, physiological data, along with actuator feedback, to enable comprehensive analysis of human assembly activities and human-robot collaboration dynamics 
     """)
 
 # --- SKILLS & RESEARCH ---
 st.divider()
 st.header("Skills Used in Project")
-st.write("- **Hardware:** ")
-st.write("- **Software:** ")
+st.write("- **Hardware:** 3D Design & Printing, Analog & Digital Sensor Integration, Industrial IoT, Modular Design, Human Factors Research, ")
+st.write("- **Software:** Signal Processing, Industrial Logic, Python, ESPHome, MQTT, InfluxDB, GitHub, Linux CLI")
