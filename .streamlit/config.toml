@@ -1,9 +1,5 @@
 [client]
-pageHideFooter = true
 showSidebarNavigation = false
-
-[UI]
-hideTopBar = true
 
 [logger]
 level = "info"
@@ -11,7 +7,6 @@ level = "info"
 [server]
 maxUploadSize = 500
 maxMessageSize = 500
-client.maxMessageSize = 500
 
 [theme]
 primaryColor = "#ba0c2f"          # UGA Red
