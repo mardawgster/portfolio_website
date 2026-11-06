@@ -267,16 +267,38 @@ for link, logo_path in socials:
 social_html += '</div>'
 st.markdown(social_html, unsafe_allow_html=True)
 
-with open("assets/Marcus_DiBattista_Resume.pdf", "rb") as resume_file:
-    st.download_button(
-        label="Download Resume",
-        data=resume_file.read(),
-        file_name="Marcus_DiBattista_Resume.pdf",
-        mime="application/pdf",
-    )
-st.space("medium")
+st.markdown("""
+    <style>
+    [data-testid="stDownloadButton"] button {
+        background: linear-gradient(135deg, #ba0c2f, #8f0925);
+        color: white;
+        border: 1px solid #e34b67;
+        border-radius: 12px;
+        padding: 0.65rem 1.5rem;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 4px 14px rgba(186, 12, 47, 0.3);
+    }
+    [data-testid="stDownloadButton"] button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(186, 12, 47, 0.45);
+        border-color: #ff8296;
+        color: white;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
-
+_, resume_col, _ = st.columns([1, 2, 1])
+with resume_col:
+    with open("assets/Marcus_DiBattista_Resume.pdf", "rb") as resume_file:
+        st.download_button(
+            label="📄  Download Resume",
+            data=resume_file.read(),
+            file_name="Marcus_DiBattista_Resume.pdf",
+            mime="application/pdf",
+            use_container_width=True,
+        )
+st.space("small")
 
 # --- PROFESSIONAL PROJECTS SECTION ---
 
