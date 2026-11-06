@@ -266,7 +266,17 @@ for link, logo_path in socials:
         continue # Skip if logo missing
 social_html += '</div>'
 st.markdown(social_html, unsafe_allow_html=True)
+
+with open("assets/Marcus_DiBattista_Resume.pdf", "rb") as resume_file:
+    st.download_button(
+        label="Download Resume",
+        data=resume_file.read(),
+        file_name="Marcus_DiBattista_Resume.pdf",
+        mime="application/pdf",
+    )
 st.space("medium")
+
+
 
 # --- PROFESSIONAL PROJECTS SECTION ---
 
