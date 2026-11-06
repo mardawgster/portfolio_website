@@ -255,18 +255,6 @@ socials = [
     ("https://github.com/mardawgster", "assets/github.png")
 ]
 
-# Build the social dock HTML
-social_html = '<div class="social-dock">'
-for link, logo_path in socials:
-    try:
-        logo_img = Image.open(logo_path)
-        logo_b64 = get_image_base64(logo_img, "PNG")
-        social_html += f'<a href="{link}" target="_blank"><img src="data:image/png;base64,{logo_b64}" class="social-icon"></a>'
-    except:
-        continue # Skip if logo missing
-social_html += '</div>'
-st.markdown(social_html, unsafe_allow_html=True)
-
 st.markdown("""
     <style>
     [data-testid="stDownloadButton"] button {
@@ -298,6 +286,19 @@ with resume_col:
             mime="application/pdf",
             use_container_width=True,
         )
+
+# Build the social dock HTML
+social_html = '<div class="social-dock">'
+for link, logo_path in socials:
+    try:
+        logo_img = Image.open(logo_path)
+        logo_b64 = get_image_base64(logo_img, "PNG")
+        social_html += f'<a href="{link}" target="_blank"><img src="data:image/png;base64,{logo_b64}" class="social-icon"></a>'
+    except:
+        continue # Skip if logo missing
+social_html += '</div>'
+st.markdown(social_html, unsafe_allow_html=True)
+
 st.space("small")
 
 # --- PROFESSIONAL PROJECTS SECTION ---
