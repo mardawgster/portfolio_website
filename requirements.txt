@@ -1,13 +1,13 @@
 streamlit>=1.28.0
 Pillow
-pandas
+pandas>=2.0.0,<3
 os-sys
 pybase64
 opencv-python-headless
 scikit-image
 matplotlib
-numpy
+numpy>=1.24.0,<2
 streamlit-image-comparison
 plotly
-scipy
+scipy>=1.10.0
 EntropyHub
