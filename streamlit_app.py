@@ -356,7 +356,7 @@ with colmain3:
             unsafe_allow_html=True
         )
     st.space("small")
-    st.write(" 🛠️ Cyber-Physical Assembly Line 🛠️ ")
+    st.write(" 🛠️ Cyber-Physical Assembly Testbed 🛠️ ")
     st.space("small")
 
 with colmain4:
